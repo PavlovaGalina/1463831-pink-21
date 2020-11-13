@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Галина Павлова](https://up.htmlacademy.ru/adaptive/21/user/1463831).
-* Наставник: `Неизвестно`.
+* Наставник: Сергей Максименко.
 
 ---
 
