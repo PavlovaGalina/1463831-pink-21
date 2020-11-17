@@ -41,70 +41,73 @@
     <main class="page-main">
       <section class="contest">
         <div class="contest__wrapper">
-        <h1>Конкурс на самое безбашенное путешествие с Пинк</h1>
-        <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
-        <form class="contest__form" action="#" method="post">
-          <label for="second-name">Фамилия</label>
-          <input class="cotest__second-name" id="second-name" name="second-name" type="text" placeholder="Укажите фамилию *">
-          <label for="first-name">Имя</label>
-          <input class="contest__first-name" id="first-name" name="first-name" type="text" placeholder="Укажите ваше имя *">
-          <label for="patronymic">Отчетсво</label>
-          <input class="contest__patronymic" id="patronymic" name="patronymic" type="text" placeholder="Ну и отчество тоже">
-          <fieldset class="contest__achievements">
-            <legend>Ваши безбашенные достижения в путешествии</legend>
-            <ul>
-              <li>
-                <input class="visually-hidden filter-checkbox" type="checkbox" name="shark-selfie" id="filter-shark-selfie" value="Сделал селфи с акулой" checked>
-                <label for="filter-shark-selfie">Сделал селфи с акулой</label>
-              </li>
-              <li>
-                <input class="visually-hidden filter-checkbox" type="checkbox" name="sunburn" id="filter-sunburn" value="Обгорел на пляже" checked>
-                <label for="filter-sunburn">Обгорел на пляже</label>
-              </li>
-              <li>
-                <input class="visually-hidden filter-checkbox" type="checkbox" name="chuck-norris" id="filter-chuck-norris" value="Видел Чака Норриса">
-                <label for="filter-chuck-norris">Видел Чака Норриса</label>
-              </li>
-              <li>
-                <input class="visually-hidden filter-checkbox" type="checkbox" name="souvenirs" id="filter-souvenirs" value="Накупил сувениров">
-                <label for="filter-souvenirs">Накупил сувениров</label>
-              </li>
-              <li>
-                <input class="visually-hidden filter-checkbox" type="checkbox" name="hold-tower" id="filter-hold-tower" value="Удержал башню" checked>
-                <label for="filter-hold-tower">Удержал башню</label>
-              </li>
-              <li>
-                <input class="visually-hidden filter-checkbox" type="checkbox" name="crush-hotel" id="filter-crush-hotel" value="Разгромил отель">
-                <label for="filter-crush-hotel">Разгромил отель</label>
-              </li>
-            </ul>
-            <label for="contest__phone-number">Номер телефона</label>
-            <input class="phone-number" id="phone-number" name="phone-number" type="text" placeholder="Номер, пожалуйста">
-            <label for="email">Адрес почты</label>
-            <input class="contest__email" id="email" name="email" type="text" placeholder="Введите почту *">
-          </fieldset>
-          <fieldset class="contest__os">
-            <legend>С каким приложением путешествовали?</legend>
-            <ul>
-              <li>
-                <input class="visually-hidden filter-radio" type="radio" name="os-type" id="filter-ios" value="Pink для iOS" checked>
-                <label for="filter-ios">Pink для iOS</label>
-              </li>
-              <li>
-                <input class="visually-hidden filter-radio" type="radio" name="os-type" id="filter-android" value="Pink на Android" checked>
-                <label for="filter-android">Pink на Android</label>
-              </li>
-              <li>
-                <input class="visually-hidden filter-radio" type="radio" name="os-type" id="filter-windows" value="Windows Phone" checked>
-                <label for="filter-windows">Windows Phone</label>
-              </li>
-            </ul>
-          </fieldset>
-          <label for="emotions-text">Опишите свои эмоции</label>
-          <textarea class="contest__emotions-text" type="text" name="emotions-text" id="emotions-text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
-          <button type="submit">Отправить форму</button>
-          <p>* — обязательные поля</p>
-        <form>
+          <div class="contest__heading">
+            <h1>Конкурс на самое безбашенное путешествие с Пинк</h1>
+            <p>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+          </div>
+          <form class="contest__form" action="#" method="post">
+            <label class="contest__title" for="second-name">Фамилия</label>
+            <input class="cotest__second-name contest__data" id="second-name" name="second-name" type="text" placeholder="Укажите фамилию *">
+            <label class="contest__title" for="first-name">Имя</label>
+            <input class="contest__first-name contest__data" id="first-name" name="first-name" type="text" placeholder="Укажите ваше имя *">
+            <label class="contest__title" for="patronymic">Отчетсво</label>
+            <input class="contest__patronymic contest__data" id="patronymic" name="patronymic" type="text" placeholder="Ну и отчество тоже">
+            <fieldset class="contest__achievements">
+              <legend class="contest__title">Ваши безбашенные достижения в путешествии</legend>
+              <ul>
+                <li>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" name="shark-selfie" id="filter-shark-selfie" value="Сделал селфи с акулой" checked>
+                  <label class="contest__data" for="filter-shark-selfie">Сделал селфи с акулой</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" name="sunburn" id="filter-sunburn" value="Обгорел на пляже" checked>
+                  <label class="contest__data" for="filter-sunburn">Обгорел на пляже</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" name="chuck-norris" id="filter-chuck-norris" value="Видел Чака Норриса">
+                  <label class="contest__data" for="filter-chuck-norris">Видел Чака Норриса</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" name="souvenirs" id="filter-souvenirs" value="Накупил сувениров">
+                  <label class="contest__data" for="filter-souvenirs">Накупил сувениров</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" name="hold-tower" id="filter-hold-tower" value="Удержал башню" checked>
+                  <label class="contest__data" for="filter-hold-tower">Удержал башню</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-checkbox" type="checkbox" name="crush-hotel" id="filter-crush-hotel" value="Разгромил отель">
+                  <label class="contest__data" for="filter-crush-hotel">Разгромил отель</label>
+                </li>
+              </ul>
+              <label class="contest__title" for="contest__phone-number">Номер телефона</label>
+              <input class="phone-number contest__data" id="phone-number" name="phone-number" type="text" placeholder="Номер, пожалуйста">
+              <label class="contest__title" for="email">Адрес почты</label>
+              <input class="contest__email contest__data" id="email" name="email" type="text" placeholder="Введите почту *">
+            </fieldset>
+            <fieldset class="contest__os">
+              <legend class="contest__title">С каким приложением путешествовали?</legend>
+              <ul>
+                <li>
+                  <input class="visually-hidden filter-radio" type="radio" name="os-type" id="filter-ios" value="Pink для iOS" checked>
+                  <label class="contest__data" for="filter-ios">Pink для iOS</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-radio" type="radio" name="os-type" id="filter-android" value="Pink на Android" checked>
+                  <label class="contest__data" for="filter-android">Pink на Android</label>
+                </li>
+                <li>
+                  <input class="visually-hidden filter-radio" type="radio" name="os-type" id="filter-windows" value="Windows Phone" checked>
+                  <label class="contest__data" for="filter-windows">Windows Phone</label>
+                </li>
+              </ul>
+            </fieldset>
+            <label for="emotions-text">Опишите свои эмоции</label>
+            <textarea class="contest__emotions-text contest__data" type="text" name="emotions-text" id="emotions-text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <button type="submit">Отправить форму</button>
+            <p><span>*<span> — обязательные поля</p>
+          <form>
+        </div>
       </section>
     </main>
 
