@@ -2,7 +2,9 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -14,22 +16,22 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="index.html">
+              <a class="main-nav__link" href="index.html">
                 Главная
               </a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html">
+              <a class="main-nav__link" href="catalog.html">
                 Фотографии
               </a>
             </li>
             <li class="main-nav__item">
-              <a href="form.html">
+              <a class="main-nav__link" href="form.html">
                 Конкурс
               </a>
             </li>
             <li class="main-nav__item">
-              <a href="#">
+              <a class="main-nav__link" href="#">
                 HTML Academy
               </a>
             </li>
@@ -48,13 +50,13 @@
           <button class="download__button">Скачать приложение</button>
           <ul class="download__os-list">
             <li class="os-item">
-              <a class="os__link os__link--ios" href="#">Скачать для IOS</a>
+              <a class="os__link os__link--ios" href="#"><img src="img/apple-logo.svg" width="47" heigth="56" alt="Скачать для IOS"></a>
             </li>
             <li  class="os-item">
-              <a class="os__link os__link--android" href="#">Скачать для Android</a>
+              <a class="os__link os__link--android" href="#"><img src="img/android-logo.svg" width="43" heigth="47" alt="Скачать для Android"></a>
             </li>
             <li  class="os-item">
-              <a class="os__link os__link--windows" href="#">Скачать для Windows</a>
+              <a class="os__link os__link--windows" href="#"><img src="img/microsoft-logo.svg" width="44" heigth="41" alt="Скачать для Windows"></a>
             </li>
           <ul>
           <p class="download__availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
@@ -63,20 +65,20 @@
       <section class="description">
         <div class="description__wrapper">
           <h2 class="visually-hidden">О приложении Pink</h2>
-          <p>Устали от серости мегаполиса?</p>
-          <p>Нам есть, что вам предложить!</p>
+          <p class="description__text">Устали от серости мегаполиса?</p>
+          <p class="description__text">Нам есть, что вам предложить!</p>
           <ul class="description__features-list">
             <li class="description__features-item">
-              <h3>Поднимает настроение</h3>
-              <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              <h3 class="description__features-heading">Поднимает настроение</h3>
+              <p class="description__features-text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
             </li>
             <li class="description__features-item">
-              <h3>Меняет мир вокруг</h3>
-              <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+              <h3 class="description__features-heading">Меняет мир вокруг</h3>
+              <p class="description__features-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </li>
             <li class="description__features-item">
-              <h3>Заводит новых друзей</h3>
-              <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+              <h3 class="description__features-heading">Заводит новых друзей</h3>
+              <p class="description__features-text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
           <img src="#">
@@ -109,53 +111,53 @@
           <div class="price__list slider__list">
             <table class="price__table slider__item">
               <th>
-                <td>
+                <td class="price__rate">
                   База
-                  <span>1,99 USD</span>
+                  <span class="price__value">1,99 USD</span>
                 </td>
               </th>
               <tr>
-                <td>Розовый фильтр</td>
+                <td class="price__option">Розовый фильтр</td>
               </tr>
               <tr>
-                <td>Смайлики</td>
+                <td class="price__option">Смайлики</td>
               </tr>
               <tr>
-                <td>Комментарии</td>
+                <td class="price__option">Комментарии</td>
               </tr>
             </table>
             <table class="price__table slider__item">
               <th>
-                <td>
+                <td class="price__rate">
                   Стандарт
-                  <span>3,99 USD</span>
+                  <span class="price__value">3,99 USD</span>
                 </td>
               </th>
               <tr>
-                <td>Розовый фильтр</td>
+                <td class="price__option">Розовый фильтр</td>
               </tr>
               <tr>
-                <td>Смайлики</td>
+                <td class="price__option">Смайлики</td>
               </tr>
               <tr>
-                <td>Комментарии</td>
+                <td class="price__option">Комментарии</td>
               </tr>
             </table>
             <table class="price__table slider__item">
               <th>
-                <td>
+                <td class="price__rate">
                   Анлим
-                  <span>9,99 USD</span>
+                  <span class="price__value">9,99 USD</span>
                 </td>
               </th>
               <tr>
-                <td>Розовый фильтр</td>
+                <td class="price__option">Розовый фильтр</td>
               </tr>
               <tr>
-                <td>Смайлики</td>
+                <td class="price__option">Смайлики</td>
               </tr>
               <tr>
-                <td>Комментарии</td>
+                <td class="price__option">Комментарии</td>
               </tr>
             </table>
           </div>
@@ -169,19 +171,19 @@
       <section class="contacts">
         <div class="contacts__wrapper">
           <h2 class="visually-hidden">Контакты</h2>
-          <p>Остались вопросы? Свяжитесь с нами!</p>
+          <p class="contacts__text">Остались вопросы? Свяжитесь с нами!</p>
           <ul class="contacts__list">
             <li class="contacts__item">
               Звоните:
-              <a class="contacts__phone" href="tel:88125556666">+7 (812) 555-66-66</a>
+              <a class="contacts__data phone" href="tel:88125556666">+7 (812) 555-66-66</a>
             </li>
             <li class="contacts__item">
               Пишите:
-              <a class="contacts__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <a class="contacts__data email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
             <li class="contacts__item">
               Приезжайте в гости:
-              <p class="contacts__address">ул. Большая Конюшенная, 19/8</p>
+              <p class="contacts__data address">ул. Большая Конюшенная, 19/8</p>
             </li>
           </ul>
           <div class="contacts__map">
@@ -211,7 +213,7 @@
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано:</b>
+          <p class="copyright__text">Разработано:</p>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </div>
       </div>
