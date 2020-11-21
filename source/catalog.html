@@ -44,7 +44,7 @@
         <div class="catalog__wrapper">
           <div class="catalog__header">
             <h1 class="catalog__heading">Фотографии пользователей</h1>
-            <p class="catalog__text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+            <p class="catalog__heading-text">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
           </div>
           <ul class="catalog__list">
             <li class="catalog__item">
@@ -112,38 +112,40 @@
             </li>
           </ul>
         </div>
-        <div class="catalogt__your-picture editor slider">
-          <h2 class="editor__heading visually-hidden"></h2>
+        <div class="catalogt__your-picture editor">
+          <h2 class="editor__heading visually-hidden">Редактор фото</h2>
           <p class="editor__text">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
-          <img class="editor__image">
-          <ul class="editor__tool-list slider__list">
-            <li class="editor__tool slider__item">
-              <div class="editor__control">
-                <div class="editor__scale">
-                  <div class="editor__bar"></div>
+          <div class="editor__wrapper slider">
+            <img class="editor__image" src="#" alt="Ваше фото">
+            <ul class="editor__tool-list slider__list">
+              <li class="editor__tool slider__item">
+                <div class="editor__control">
+                  <div class="editor__scale">
+                    <div class="editor__bar"></div>
+                  </div>
+                  <div class="editor__toggle"></div>
                 </div>
-                <div class="editor__toggle"></div>
-              </div>
-            </li>
-            <li class="editor__tool slider__item">
-              <div class="editor__control">
-                <div class="editor__scale">
-                  <div class="editor__bar"></div>
+              </li>
+              <li class="editor__tool slider__item">
+                <div class="editor__control">
+                  <div class="editor__scale">
+                    <div class="editor__bar"></div>
+                  </div>
+                  <div class="editor__toggle"></div>
                 </div>
-                <div class="editor__toggle"></div>
-              </div>
-            </li>
-            <li class="editor__tool slider__item">
-              <div class="editor__control">
-                <div class="editor__scale">
-                  <div class="editor__bar"></div>
+              </li>
+              <li class="editor__tool slider__item">
+                <div class="editor__control">
+                  <div class="editor__scale">
+                    <div class="editor__bar"></div>
+                  </div>
+                  <div class="editor__toggle"></div>
                 </div>
-                <div class="editor__toggle"></div>
-              </div>
-            </li>
-          </ul>
-          <button class="editor__button button">Запостить</button>
-          <button class="editor__button button">Отмена</button>
+              </li>
+            </ul>
+            <button class="editor__post-button button">Запостить</button>
+            <button class="editor__cancel-button button">Отмена</button>
+          </div>
         </div>
       </section>
     </main>
