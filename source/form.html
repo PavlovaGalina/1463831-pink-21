@@ -2,34 +2,36 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo logo">
         <img class="page-header__logo-image logo-image" src="#" width="74" height="23" alt="Логотип Pink">
       </a>
-      <nav class="main-nav">
+      <nav class="page-header__main-nav main-nav">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item">
-              <a href="index.html">
+              <a class="main-nav__link" href="index.html">
                 Главная
               </a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html">
+              <a class="main-nav__link" href="catalog.html">
                 Фотографии
               </a>
             </li>
             <li class="main-nav__item">
-              <a href="form.html">
+              <a class="main-nav__link" href="form.html">
                 Конкурс
               </a>
             </li>
             <li class="main-nav__item">
-              <a href="#">
+              <a class="main-nav__link" href="#">
                 HTML Academy
               </a>
             </li>
@@ -46,15 +48,15 @@
             <p class="contest__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
           </div>
           <form class="contest__form" action="#" method="post">
-            <label class="contest__title" for="second-name">Фамилия</label>
+            <label class="contest__label" for="second-name">Фамилия</label>
             <input class="cotest__second-name contest__data" id="second-name" name="second-name" type="text" placeholder="Укажите фамилию *">
-            <label class="contest__title" for="first-name">Имя</label>
+            <label class="contest__label" for="first-name">Имя</label>
             <input class="contest__first-name contest__data" id="first-name" name="first-name" type="text" placeholder="Укажите ваше имя *">
-            <label class="contest__title" for="patronymic">Отчетсво</label>
+            <label class="contest__label" for="patronymic">Отчество</label>
             <input class="contest__patronymic contest__data" id="patronymic" name="patronymic" type="text" placeholder="Ну и отчество тоже">
             <fieldset class="contest__achievements">
               <legend class="contest__title">Ваши безбашенные достижения в путешествии</legend>
-              <ul>
+              <ul class="contest__checkbox-list">
                 <li>
                   <input class="visually-hidden filter-checkbox" type="checkbox" name="shark-selfie" id="filter-shark-selfie" value="Сделал селфи с акулой" checked>
                   <label class="contest__data" for="filter-shark-selfie">Сделал селфи с акулой</label>
@@ -80,14 +82,14 @@
                   <label class="contest__data" for="filter-crush-hotel">Разгромил отель</label>
                 </li>
               </ul>
-              <label class="contest__title" for="contest__phone-number">Номер телефона</label>
-              <input class="phone-number contest__data" id="phone-number" name="phone-number" type="text" placeholder="Номер, пожалуйста">
-              <label class="contest__title" for="email">Адрес почты</label>
-              <input class="contest__email contest__data" id="email" name="email" type="text" placeholder="Введите почту *">
             </fieldset>
+            <label class="contest__label" for="contest__phone-number">Номер телефона</label>
+            <input class="phone-number contest__data" id="phone-number" name="phone-number" type="text" placeholder="Номер, пожалуйста">
+            <label class="contest__label" for="email">Адрес почты</label>
+            <input class="contest__email contest__data" id="email" name="email" type="text" placeholder="Введите почту *">
             <fieldset class="contest__os">
               <legend class="contest__title">С каким приложением путешествовали?</legend>
-              <ul>
+              <ul class="contest__radio-list">
                 <li>
                   <input class="visually-hidden filter-radio" type="radio" name="os-type" id="filter-ios" value="Pink для iOS" checked>
                   <label class="contest__data" for="filter-ios">Pink для iOS</label>
@@ -102,10 +104,10 @@
                 </li>
               </ul>
             </fieldset>
-            <label for="emotions-text">Опишите свои эмоции</label>
+            <label class="contest__title" for="emotions-text">Опишите свои эмоции</label>
             <textarea class="contest__emotions-text contest__data" type="text" name="emotions-text" id="emotions-text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
             <button class="contest__submit-button contest-button" type="submit">Отправить форму</button>
-            <p><span>*<span> — обязательные поля</p>
+            <p class="contest__text"><span class="contest__text--asterisk">*</span> — обязательные поля</p>
           <form>
         </div>
       </section>
@@ -132,7 +134,7 @@
           </ul>
         </div>
         <div class="page-footer__copyright copyright">
-          <b class="copyright__text">Разработано:</b>
+          <p class="copyright__text">Разработано:</p>
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
         </div>
       </div>
