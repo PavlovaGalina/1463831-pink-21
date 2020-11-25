@@ -1,7 +1,29 @@
+.main-nav__toggle {
+  @media (min-width: @desktop) {
+    display: none;
+  }
+}
+
 .main-nav__list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 620px;
+  }
+}
+
+.main-nav__item {
+  text-align: center;
+
+  @media (min-width: @desktop) {
+    flex-direction: row;
+  }
 }
 
 .main-nav__link {
@@ -11,4 +33,10 @@
   color: @white;
   text-transform: uppercase;
   text-decoration: none;
+
+  @media (min-width: @desktop) {
+    line-height: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+  }
 }
