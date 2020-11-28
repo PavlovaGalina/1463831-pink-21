@@ -47,15 +47,25 @@
         <div class="contest__wrapper">
           <div class="contest__header">
             <h1 class="contest__heading">Конкурс на самое безбашенное путешествие с Пинк</h1>
-            <p class="contest__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+          </div>
+          <div class="contest__heading-text">
+            <p class="contest__text">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! <span class="contest__text--form">Пожалуйста, заполните форму ниже:</span></p>
           </div>
           <form class="contest__form" action="#" method="post">
-            <label class="contest__label" for="second-name">Фамилия</label>
-            <input class="cotest__second-name contest__data" id="second-name" name="second-name" type="text" placeholder="Укажите фамилию *">
-            <label class="contest__label" for="first-name">Имя</label>
-            <input class="contest__first-name contest__data" id="first-name" name="first-name" type="text" placeholder="Укажите ваше имя *">
-            <label class="contest__label" for="patronymic">Отчество</label>
-            <input class="contest__patronymic contest__data" id="patronymic" name="patronymic" type="text" placeholder="Ну и отчество тоже">
+            <div class="contest__name-wrapper">
+              <div class="contest__input-wrapper">
+                <label class="contest__label contest__input-label" for="second-name">Фамилия</label>
+                <input class="contest__input contest__data" id="second-name" name="second-name" type="text" placeholder="Укажите фамилию *">
+              </div>
+              <div class="contest__input-wrapper">
+                <label class="contest__label contest__input-label" for="first-name">Имя</label>
+                <input class="contest__input contest__data" id="first-name" name="first-name" type="text" placeholder="Укажите ваше имя *">
+              </div>
+              <div class="contest__input-wrapper">
+                <label class="contest__label contest__input-label" for="patronymic">Отчество</label>
+                <input class="contest__input contest__data" id="patronymic" name="patronymic" type="text" placeholder="Ну и отчество тоже">
+              </div>
+            </div>
             <fieldset class="contest__achievements">
               <legend class="contest__title">Ваши безбашенные достижения в путешествии</legend>
               <ul class="contest__checkbox-list">
@@ -85,10 +95,19 @@
                 </li>
               </ul>
             </fieldset>
-            <label class="contest__label" for="contest__phone-number">Номер телефона</label>
-            <input class="phone-number contest__data" id="phone-number" name="phone-number" type="text" placeholder="Номер, пожалуйста">
-            <label class="contest__label" for="email">Адрес почты</label>
-            <input class="contest__email contest__data" id="email" name="email" type="text" placeholder="Введите почту *">
+            <fieldset class="contest__contacts">
+              <legend class="contest__title contest__contacts-title">Контактная информация</legend>
+              <div class="contest__contacts-wrapper">
+                <div class="contest__contacts-input-wrapper">
+                  <label class="contest__label contest__input-label" for="contest__phone-number">Номер телефона</label>
+                  <input class="contest__input contest__data contest__contacts-input" id="phone-number" name="phone-number" type="text" placeholder="Номер, пожалуйста">
+                </div>
+                <div class="contest__contacts-input-wrapper">
+                  <label class="contest__label contest__input-label" for="email">Адрес почты</label>
+                  <input class="contest__input contest__data contest__contacts-input" id="email" name="email" type="text" placeholder="Введите почту *">
+                </div>
+              </div>
+            </fieldset>
             <fieldset class="contest__os">
               <legend class="contest__title">С каким приложением путешествовали?</legend>
               <ul class="contest__radio-list">
@@ -106,10 +125,12 @@
                 </li>
               </ul>
             </fieldset>
-            <label class="contest__title" for="emotions-text">Опишите свои эмоции</label>
-            <textarea class="contest__emotions-text contest__data" type="text" name="emotions-text" id="emotions-text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            <div class="contest__emotions-wrapper">
+              <label class="contest__title" for="emotions-text">Опишите свои эмоции</label>
+              <textarea class="contest__emotions-text contest__data" type="text" name="emotions-text" id="emotions-text" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </div>
             <button class="contest__submit-button contest-button" type="submit">Отправить форму</button>
-            <p class="contest__text"><span class="contest__text--asterisk">*</span> — обязательные поля</p>
+            <p class="contest__required-fields"><span class="contest__required-fields--asterisk">*</span> — обязательные поля</p>
           <form>
         </div>
       </section>

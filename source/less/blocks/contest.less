@@ -1,14 +1,44 @@
+.contest__header {
+  background-color: @blue-black;
+  background-image: url("../img/background-main.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .contest__heading {
+  max-width: 230px;
   font-size: 24px;
   line-height: 33px;
   font-weight: 300;
   color: @white;
   text-align: center;
-  margin: 0;
-  background-color: @blue-black;
-  background-image: url("../img/background-main.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
+  margin: 0 auto;
+  padding: 26px 20px;
+  padding-bottom: 41px;
+
+  @media (min-width: @tablet) {
+    max-width: 620px;
+    font-size: 50px;
+    line-height: 68px;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: 747px;
+  }
+}
+
+.contest__heading-text {
+  padding: 44px 20px;
+  padding-bottom: 45px;
+  text-align: center;
+
+  @media (min-width: @tablet) {
+
+  }
+
+  @media (min-width: @desktop) {
+
+  }
 }
 
 .contest__text {
@@ -16,10 +46,23 @@
   line-height: 30px;
   font-weight: 400;
   color: @blue-grey;
-  margin: 0;
+  margin: 0 auto;
 
-  &--asterisk {
-    color: @pink;
+  @media (min-width: @tablet) {
+    max-width: 490px;
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: 760px;
+  }
+}
+
+.contest__text--form {
+  display: none;
+
+  @media (min-width: @tablet) {
+  display: inline;
   }
 }
 
@@ -41,6 +84,7 @@
   font-weight: 400;
   color: @pink;
   text-transform: uppercase;
+  text-align: center;
   padding: 0;
   margin: 0;
 }
@@ -55,12 +99,68 @@
   margin: 0;
 }
 
-.contest__achievements,
-.contest__os {
+.contest__form {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet) {
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 940px;
+  }
+}
+
+.contest__input-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet) {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-gap: 20px;
+  }
+}
+
+.contest__name-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  padding-bottom: 44px;
+  order: 1;
+
+  @media (min-width: @desktop) {
+    width: 433px;
+  }
+}
+
+.contest__input-label {
+  margin-bottom: 7px;
+}
+
+.contest__input:last-child {
+  margin-bottom: 0;
+}
+
+.contest__achievements {
   background-color: @light-grey;
   margin: 0;
   padding: 0;
   border: none;
+  order: 2;
+
+  @media (min-width: @tablet) {
+    background-color: @white;
+    order: 4;
+  }
+
+  @media (min-width: @desktop) {
+    width: 100%;
+  }
 }
 
 .contest__checkbox-list {
@@ -69,8 +169,112 @@
   list-style: none;
 }
 
+.contest__contacts {
+  display: flex;
+  flex-direction: column;
+  order: 3;
+}
+
+.contest__contacts-wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 20px;
+  padding-bottom: 34px;
+
+  @media (min-width: @tablet) {
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop) {
+    width: 100%;
+  }
+}
+
+.contest__contacts-title {
+  width: 100%;
+
+  @media (min-width: @tablet) {
+
+  }
+}
+
+.contest__contacts-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (min-width: @tablet) {
+    flex-direction: column-reverse;
+  }
+}
+
+.contest__contacts-input {
+  @media (min-width: @tablet) {
+    width: 371px;
+  }
+}
+
+.contest__os {
+  background-color: @light-grey;
+  margin: 0;
+  padding: 0;
+  border: none;
+  order: 4;
+
+  @media (min-width: @tablet) {
+    background-color: @white;
+    order: 2;
+  }
+
+  @media (min-width: @desktop) {
+    width: 431px;
+  }
+}
+
 .contest__radio-list {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.contest__emotions-wrapper {
+  order: 5;
+
+  @media (min-width: @tablet) {
+
+  }
+
+  @media (min-width: @tablet) {
+    width: 100%;
+  }
+}
+
+.contest__emotions-text {
+  width: 100%;
+  resize: none;
+}
+
+.contest__submit-button {
+  width: 276px;
+  align-self: center;
+  order: 6;
+
+  @media (min-width: @tablet) {
+    width: 296px;
+  }
+}
+
+.contest__required-fields {
+  align-self: flex-end;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @blue-grey;
+  margin: 0;
+  margin-left: auto;
+  order: 7;
+
+  &--asterisk {
+    color: @pink;
+  }
 }
