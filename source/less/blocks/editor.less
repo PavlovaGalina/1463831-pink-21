@@ -2,27 +2,154 @@
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
+  background-color: @white;
   color: @blue-grey;
   text-align: center;
   margin: 0;
+
+  @media (min-width: @tablet) {
+    font-size: 18px;
+  }
 }
 
 .editor__wrapper {
   background-color: @light-grey;
+
+  @media (min-width: @tablet) {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, max-content);
+    grid-template-rows: repeat(2, max-content);
+  }
+
+  @media (min-width: @desktop) {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+}
+
+.editor__image {
+  @media (min-width: @tablet) {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+  }
 }
 
 .editor__tool-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
+  margin-top: 42px;
+  margin-bottom: 39px;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet) {
+    grid-row: 1;
+    grid-column: 2;
+    flex-direction: column;
+  }
+}
+
+.editor__tool {
+  margin-right: 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (min-width: @tablet) {
+    margin-right: 0;
+  }
+}
+
+.editor__scale-list {
+  margin: 0;
+  margin-bottom: 34px;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: @tablet) {
+    grid-row: 1;
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.editor__control {
+  position: relative;
+}
+
+.editor__scale {
+  display: none;
+  height: 2px;
+  width: 240px;
+  margin: 34px auto;
+  margin-bottom: 70px;
+  background-color: @blue-grey;
+
+  &--active {
+    display: block;
+  }
+
+  @media (min-width: @tablet) {
+    display: block;
+  }
+}
+
+.editor__toggle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 2px solid @pink;
+  background-color: @white;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--crop {
+    top: -7px;
+    left: 146px;
+  }
+
+  &--fill {
+    top: -7px;
+    left: 25px;
+  }
+
+  &--contrast {
+    top: -7px;
+    left: 96px;
+  }
+}
+
+.editor__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 38px 20px;
+  padding-bottom: 41px;
+
+  @media (min-width: @tablet) {
+    grid-row: 2;
+    grid-column: 2 / span 2;
+  }
+
+  @media (min-width: @desktop) {
+    flex-direction: row;
+  }
 }
 
 .editor__post-button {
+  width: 280px;
+  margin-bottom: 12px;
   color: @pink;
   border: 3px solid @pink;
 }
 
 .editor__cancel-button {
+  width: 280px;
   color: @blue-grey;
   border: 3px solid @blue-grey;
   opacity: 0.1;
