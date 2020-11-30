@@ -55,6 +55,8 @@
 }
 
 .catalog__item--panorama {
+  position: relative;
+
   @media (min-width: @tablet) {
     grid-column: 1 / span 2;
   }
@@ -62,10 +64,6 @@
   @media (min-width: @desktop) {
     grid-column: 1 / span 3;
   }
-}
-
-.catalog__item--panorama {
-  position: relative;
 }
 
 .catalog__item--panorama::after {
