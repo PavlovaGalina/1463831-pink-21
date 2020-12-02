@@ -2,27 +2,136 @@
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
+  background-color: @white;
   color: @blue-grey;
   text-align: center;
   margin: 0;
+
+  @media (min-width: @tablet) {
+    font-size: 18px;
+  }
 }
 
 .editor__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: @light-grey;
+
+  @media (min-width: @tablet) {
+    flex-direction: row;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: 940px;
+    margin: 0 auto;
+  }
 }
 
 .editor__tool-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   margin: 0;
+  margin-top: 42px;
+  margin-bottom: 39px;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet) {
+    flex-direction: column;
+  }
+}
+
+.editor__tool-button {
+  border: none;
+  background-color: transparent;
+}
+
+.editor__tool {
+  position: relative;
+  display: flex;
+
+  @media (min-width: @tablet) {
+    margin-right: 0;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.editor__control {
+  position: relative;
+  display: none;
+
+  &--active {
+    @media (max-width: @tablet) {
+      position: absolute;
+      display: block;
+      bottom: -20px;
+      left: 20%;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    display: block;
+  }
+}
+
+.editor__bar {
+  height: 2px;
+  width: 240px;
+  margin: 0 auto;
+  margin-bottom: 0;
+  background-color: @blue-grey;
+}
+
+.editor__toggle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 2px solid @pink;
+  background-color: @white;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--crop {
+    top: -7px;
+    left: 146px;
+  }
+
+  &--fill {
+    top: -7px;
+    left: 25px;
+  }
+
+  &--contrast {
+    top: -7px;
+    left: 96px;
+  }
+}
+
+.editor__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 38px 20px;
+  padding-bottom: 41px;
+
+  @media (min-width: @desktop) {
+    flex-direction: row;
+  }
 }
 
 .editor__post-button {
+  width: 280px;
+  margin-bottom: 12px;
   color: @pink;
   border: 3px solid @pink;
 }
 
 .editor__cancel-button {
+  width: 280px;
   color: @blue-grey;
   border: 3px solid @blue-grey;
   opacity: 0.1;

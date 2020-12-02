@@ -9,26 +9,113 @@
   background-image: url("../img/background-main.jpg");
   background-position: center;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet) {
+    font-size: 50px;
+    line-height: 68px;
+  }
 }
 
 .catalog__heading-text {
+  max-width: 280px;
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
   color: @blue-grey;
   text-align: center;
-  margin: 0;
+  margin: 0 auto;
+
+  @media (min-width: @tablet) {
+    max-width: 550px;
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: 580px;
+  }
 }
 
 .catalog__list {
+  display: grid;
+  justify-content: center;
+  align-items: stretch;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet) {
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+  }
+
+  @media (min-width: @desktop) {
+    grid-template-columns: repeat(3, 300px);
+  }
+}
+
+.catalog__item {
+  max-width: 300px;
+  padding: 0 20px;
+
+  @media (min-width: @tablet) {
+    padding: 0;
+  }
+}
+
+.catalog__item--panorama {
+  max-width: 100%;
+  position: relative;
+
+  @media (min-width: @tablet) {
+    grid-column: 1 / span 2;
+  }
+
+  @media (min-width: @desktop) {
+    grid-column: 1 / span 3;
+  }
+}
+
+.catalog__item--panorama::after {
+  content: "Панорама дня";
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: 140px;
+  height: 36px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: @white;
+  text-align: center;
+  padding-top: 7px;
+  background-color: @pink;
 }
 
 .catalog__quote {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin: 0;
   background-color: @light-grey;
+
+  @media (min-width: @tablet) {
+    height: 115px;
+    padding: 20px 30px;
+  }
+}
+
+.catalog__quote--panorama {
+  @media (min-width: @tablet) {
+    .catalog__like {
+      margin-left: auto;
+      order: 2;
+    }
+
+    .catalog__text {
+      order: 3;
+    }
+  }
 }
 
 .catalog__author-name {
@@ -38,6 +125,7 @@
   font-style: normal;
   color: @blue-grey;
   margin: 0;
+  margin-right: 3px;
 }
 
 .catalog__date {
@@ -50,6 +138,7 @@
 }
 
 .catalog__text {
+  width: 100%;
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
