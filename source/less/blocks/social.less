@@ -1,8 +1,44 @@
 .social__list {
-  width: 172px;
   display: flex;
-  justify-content: space-between;
   margin: 0;
+  margin-bottom: 41px;
   padding: 0;
   list-style: none;
+
+  @media (min-width: @tablet) {
+    margin: 0;
+  }
+}
+
+.social__item {
+  width: 48px;
+  height: 48px;
+  text-align: center;
+  margin-right: 6px;
+  border: 4px solid fade(@blue-grey, 10%);
+  border-radius: 50%;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    border: 4px solid @blue-grey;
+  }
+
+  &:active {
+    border: 4px solid fade(@blue-grey, 10%);
+
+    path {
+      fill: fade(@pink, 30%);
+    }
+  }
+}
+
+.social__link {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

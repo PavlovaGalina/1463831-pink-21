@@ -1,8 +1,9 @@
 .download {
   background-color: @blue-black;
-  background-image: url("../img/background-main.jpg");
+  background-image: url("../img/back-desktop.jpg");
   background-position: top;
   background-repeat: no-repeat;
+  background-size: cover;
   text-align: center;
 }
 
@@ -15,7 +16,7 @@
     padding-bottom: 119px;
   }
 
-  @media (min-width: @tablet) {
+  @media (min-width: @desktop) {
     padding: 114px 130px;
     padding-bottom: 130px;
   }
@@ -35,9 +36,15 @@
 }
 
 .download__slogan {
-  max-width: 280px;
+  max-width: 300px;
   color: @white;
   margin: 0;
+
+  br {
+    @media (max-width: @mobile-only) {
+    display: none;
+    }
+  }
 }
 
 .download__content {
@@ -52,10 +59,21 @@
 }
 
 .download__button {
+  width: 280px;
   margin: 0;
   margin-bottom: 38px;
 
+  &:hover {
+    color: @pink;
+    background-color: @white;
+  }
+
+  &:active {
+    color: fade(@pink, 30%);
+  }
+
   @media (min-width: @tablet) {
+    width: 300px;
     margin-bottom: 67px;
   }
 }
@@ -89,4 +107,8 @@
   color: @white;
   margin: 0;
   text-align: center;
+
+  @media (min-width: @tablet) {
+    font-size: 18px;
+  }
 }

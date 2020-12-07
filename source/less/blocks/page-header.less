@@ -1,7 +1,7 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  background-color: @blue-grey;
+  background-color: fade(@black, 30%);
 
   @media (min-width: @desktop) {
     justify-content: space-between;
@@ -11,24 +11,43 @@
 }
 
 .page-header__wrapper {
-  padding: 22px 20px;
-  padding-bottom: 21px;
-
-  @media (min-width: @tablet) {
-    padding: 43px 20px;
-  }
-
   @media (min-width: @desktop) {
     width: 940px;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     margin: 0 auto;
-    padding: 43px 0;
+    padding-top: 43px;
+    padding-bottom: 38px;
+  }
+}
+
+.page-header__logo-wrapper {
+  padding: 22px 20px;
+  padding-bottom: 19px;
+  box-shadow: 0px 1px 0px #000000;
+
+  @media (min-width: @tablet) {
+    padding: 43px 20px;
+    padding-bottom: 38px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+    box-shadow: none;
   }
 }
 
 .page-header__logo-image {
-  width: 74px;
-  height: 23px;
+  width: 145px;
+  height: 40px;
+  fill: @white;
+
+  &:hover path {
+    fill: @pink;
+  }
+
+  &:active path {
+    fill: fade(@white, 30%);
+  }
 }

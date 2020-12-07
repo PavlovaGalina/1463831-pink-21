@@ -20,25 +20,36 @@
 }
 
 .price__list {
+  width: 550px;
+  overflow: hidden;
+  margin-left: -230px;
+
+  @media (min-width: @tablet) {
+    width: 100%;
+    margin: 0;
+  }
+
   @media (min-width: @desktop) {
     width: 940px;
   }
 }
 
 .price__rate {
-  width: 100%;
+  width: 276px;
   background-color: @blue-grey;
-  padding: 19px 90px;
+  padding: 19px 100px;
   padding-bottom: 35px;
+  text-align: center;
 
   @media (min-width: @tablet) {
-    width: 25%;
-    padding: 19px 35px;
+    width: 152px;
+    padding: 0;
     padding-bottom: 16px;
   }
 
   @media (min-width: @tablet) {
-    padding: 23px 65px;
+    width: 233px;
+    padding: 23px 0;
     padding-bottom: 25px;
   }
 }
@@ -64,21 +75,36 @@
   }
 }
 
-.price__option--title {
-  display: none;
+.price__rate--standart {
+  position: relative;
+}
 
-  @media (min-width: @tablet) {
-    display: block;
-    text-transform: capitalize;
-  }
+.price__rate--standart::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 74px;
+  height: 74px;
+  background-image: url(../img/hit-ribbon.svg);
+  background-position: top;
+  background-repeat: no-repeat;
+}
 
-  @media (min-width: @tablet) {
-    display: block;
-  }
+.price__rate--standart::after {
+  position: absolute;
+  content: "Хит";
+  top: 14px;
+  left: 14px;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @white;
+  text-transform: uppercase;
+  transform: rotate(-45deg);
 }
 
 .price__heading {
-  width: 100%;
   font-size: 16px;
   line-height: 30px;
   font-weight: 700;
@@ -106,7 +132,7 @@
   }
 }
 
-.price__options {
+.price__options-list {
   font-size: 14px;
   line-height: 30px;
   font-weight: 400;
@@ -114,3 +140,103 @@
   text-transform: uppercase;
   margin: 0;
 }
+
+.price__option--title {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: table-cell;
+    width: 152px;
+    height: 45px;
+    padding-left: 15px;
+    text-transform: capitalize;
+  }
+
+  @media (min-width: @desktop) {
+    width: 233px;
+    height: 59px;
+    font-size: 18px;
+    padding-left: 22px;
+  }
+}
+
+.price__option {
+  width: 276px;
+  height: 59px;
+  padding-left: 20px;
+
+  @media (min-width: @tablet) {
+    width: 152px;
+    height: 45px;
+    color: transparent;
+  }
+
+  @media (min-width: @desktop) {
+    width: 233px;
+    height: 59px;
+  }
+}
+
+.price__option--yes {
+  position: relative;
+}
+
+.price__option--yes::after {
+  position: absolute;
+  content: "";
+  right: 17px;
+  top: 19px;
+  width: 31px;
+  height: 21px;
+  background-image: url(../img/yes.svg);
+
+  @media (min-width: @tablet) {
+    left: 60px;
+    top: 12px;
+  }
+
+  @media (min-width: @desktop) {
+    left: 101px;
+    top: 19px;
+  }
+}
+
+.price__option--no {
+  position: relative;
+}
+
+.price__option--no::after {
+  position: absolute;
+  content: "";
+  right: 19px;
+  top: 16px;
+  width: 27px;
+  height: 27px;
+  background-image: url(../img/no.svg);
+
+  @media (min-width: @tablet) {
+    left: 62px;
+    top: 9px;
+  }
+
+  @media (min-width: @desktop) {
+    left: 103px;
+    top: 16px;
+  }
+}
+
+.price__toggles {
+  @media (min-width: @tablet) {
+    display: none;
+  }
+}
+
+/*.price__base,
+.price__unlim {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: table-cell;
+  }
+}
+*/

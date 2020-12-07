@@ -5,8 +5,9 @@
 .page-footer__wrapper {
   display: flex;
   flex-direction: column;
-  padding: 57px 40px;
-  padding-bottom: 51px;
+  align-items: center;
+  padding-top: 57px;
+  padding-bottom: 40px;
 
   @media (min-width: @tablet) {
     padding: 40px 20px;
@@ -17,7 +18,15 @@
   @media (min-width: @desktop) {
     width: 940px;
     margin: 0 auto;
-    padding-top: 75px;
+    padding: 75px 0;
     padding-bottom: 74px;
+  }
+}
+
+.page-footer__logo {
+  margin-bottom: 41px;
+
+  @media (min-width: @tablet) {
+    margin: 0;
   }
 }

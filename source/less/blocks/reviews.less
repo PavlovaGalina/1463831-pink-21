@@ -19,6 +19,7 @@
 }
 
 .reviews__list {
+  position: relative;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -26,6 +27,21 @@
   @media (min-width: @desktop) {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+.reviews__list::before {
+  @media (min-width: @desktop) {
+    position: absolute;
+    content: "";
+    width: 79px;
+    height: 63px;
+    top: -120px;
+    left: 450px;
+    background-image: url(../img/quotes.svg);
+    background-repeat: no-repeat;
+    background-position: center;
   }
 }
 
@@ -50,11 +66,11 @@
   font-style: normal;
   color: @black;
   margin: 0;
-  margin-bottom: 31px;
+  margin-bottom: 15px;
 
   @media (min-width: @tablet) {
     font-size: 20px;
-    margin-bottom: 17px;
+    margin-bottom: 3px;
   }
 
   @media (min-width: @desktop) {
@@ -67,6 +83,13 @@
 
   @media (min-width: @tablet) {
     display: block;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+
+  @media (min-width: @desktop) {
+    font-size: 18px;
   }
 }
 
@@ -80,11 +103,7 @@
   @media (min-width: @tablet) {
     font-size: 18px;
     order: -1;
-    margin-bottom: 51px;
-  }
-
-  @media (min-width: @desktop) {
-    margin-bottom: 50px;
+    margin-bottom: 35px;
   }
 }
 
@@ -93,6 +112,9 @@
 
   @media (min-width: @desktop) {
     display: block;
+    background-color: transparent;
+    border: none;
+    margin-top: 26px;
     order: -1;
   }
 }
@@ -102,5 +124,27 @@
 
   @media (min-width: @desktop) {
     display: block;
+    background-color: transparent;
+    border: none;
+    margin-top: 26px;
+  }
+}
+
+.reviews__prev--icon,
+.reviews__next--icon {
+  fill: fade(@blue-grey, 30%);
+
+  &:hover path {
+    fill: fade(@blue-grey, 60%);
+  }
+
+  &:active path {
+    fill: fade(@blue-grey, 10%);
+  }
+}
+
+.reviews__toggles {
+  @media (min-width: @desktop) {
+    display: none;
   }
 }

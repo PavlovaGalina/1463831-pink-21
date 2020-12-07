@@ -1,5 +1,47 @@
+.slider__toggles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 19px;
+}
+
 .slider__toggle {
+  width: 6px;
+  height: 6px;
+  padding: 0;
+  background-color: fade(@blue-grey, 30%);
+  border: none;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: fade(@blue-grey, 60%);
+  }
+
+  &:active {
+    background-color: fade(@blue-grey, 10%);
+  }
+}
+
+.slider__toggle--current {
+  width: 9px;
+  height: 9px;
+  background-color: transparent;
+  border: 3px solid @blue-grey;
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+  }
+}
+
+.reviews__toggles {
   @media (min-width: @desktop) {
+    display: none;
+  }
+}
+
+.price__toggles {
+  @media (min-width: @tablet) {
     display: none;
   }
 }
