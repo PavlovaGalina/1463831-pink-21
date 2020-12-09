@@ -18,13 +18,23 @@
   line-height: 30px;
   font-weight: 700;
   color: @white;
+  text-transform: uppercase;
   margin: 0;
-  padding: 15px 45px;
+  padding: 15px 0;
   background-color: @green;
   border: 2px solid @green;
   border-radius: 1px;
 
-  @media (min-width: @tablet) {
-    padding: 15px 55px;
+  &:hover {
+    background-color: @dark-green;
+    border-color: @dark-green;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+  }
+
+  &:disabled {
+    background-color: @grey;
   }
 }

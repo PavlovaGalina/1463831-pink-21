@@ -25,12 +25,12 @@
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -2px;
   right: 0;
   width: 50px;
-  height: 3px;
+  height: 4px;
   background-color: @white;
-  box-shadow: 0 8px 0 0 @white, 0 16px 0 0 @white;
+  box-shadow: 0 10px 0 0 @white, 0 20px 0 0 @white;
 }
 
 .main-nav--closed .main-nav__toggle:hover::before {
@@ -142,6 +142,8 @@
     font-weight: 400;
     text-transform: capitalize;
     box-shadow: none;
+    padding-top: 18px;
+    padding-bottom: 11px;
   }
 }
 
@@ -154,5 +156,23 @@
 
   @media (min-width: @desktop) {
     color: fade(@white, 30%);
+  }
+}
+
+.main-nav__link--current {
+  @media (min-width: @desktop) {
+    border-bottom: 2px solid @white;
+  }
+}
+
+.main-nav__link--current:hover {
+  @media (min-width: @desktop) {
+    border-bottom: 2px solid @pink;
+  }
+}
+
+.main-nav__link--current:active {
+  @media (min-width: @desktop) {
+    border-bottom: 2px solid fade(@white, 30%);;
   }
 }

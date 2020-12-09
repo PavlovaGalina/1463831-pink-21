@@ -1,13 +1,24 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  background-color: fade(@black, 30%);
+  background-origin: padding-box;
+  margin-bottom: -66px;
+
+  @media (min-width: @tablet) {
+    margin-bottom: -110px;
+  }
 
   @media (min-width: @desktop) {
     justify-content: space-between;
     flex-direction: row;
     width: 100%;
+    margin-bottom: -138px;
   }
+}
+
+.page-header__outer-wpapper {
+  width: 100%;
+  background-color: fade(@black, 30%);
 }
 
 .page-header__wrapper {
@@ -15,20 +26,18 @@
     width: 940px;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
     margin: 0 auto;
-    padding-top: 43px;
-    padding-bottom: 38px;
+    padding-top: 27px;
+    padding-bottom: 34px;
   }
 }
 
 .page-header__logo-wrapper {
-  padding: 22px 20px;
-  padding-bottom: 19px;
+  padding: 19px 20px;
   box-shadow: 0px 1px 0px @black;
 
   @media (min-width: @tablet) {
-    padding: 43px 20px;
+    padding: 27px 20px;
     padding-bottom: 38px;
   }
 
@@ -39,9 +48,14 @@
 }
 
 .page-header__logo-image {
-  width: 145px;
-  height: 40px;
+  width: 74px;
+  height: 23px;
   fill: @white;
+
+  @media (min-width: @tablet) {
+    width: 145px;
+    height: 40px;
+  }
 
   &:hover path {
     fill: @pink;
