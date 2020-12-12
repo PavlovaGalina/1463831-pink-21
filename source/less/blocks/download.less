@@ -1,29 +1,32 @@
 .download {
   background-color: @blue-black;
-  background-image: url("../img/back-desktop.jpg");
-  background-position: top;
-  background-repeat: no-repeat;
-  background-size: cover;
   text-align: center;
 }
 
-.download__wrapper {
-  padding: 29px 20px;
-  padding-bottom: 38px;
+.download__header {
+  background-color: @blue-black;
+  background:  url("../img/back-mobile.jpg") top no-repeat;
+  background-size: cover;
 
   @media (min-width: @tablet) {
-    padding: 102px 20px;
-    padding-bottom: 119px;
+    background-color: @blue-black;
+    background-image: url("../img/back-tablet.jpg");
+    background-position: 50% 15%;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   @media (min-width: @desktop) {
-    padding: 237px 130px;
-    padding-bottom: 130px;
+    background-image: url("../img/back-desktop.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
 .download__heading {
-  padding-bottom: 320px;
+  padding: 90px 20px;
+  padding-bottom: 315px;
   margin: 0 auto;
 
   @media (min-width: @tablet) {
@@ -52,16 +55,23 @@
   flex-direction: column;
   align-items: center;
   max-width: 280px;
+  padding: 29px 20px;
+  padding-bottom: 31px;
 
   @media (min-width: @tablet) {
     max-width: 300px;
+
+  }
+
+  @media (min-width: @desktop) {
+
   }
 }
 
 .download__button {
   width: 280px;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 33px;
 
   &:hover {
     color: @pink;
@@ -80,7 +90,7 @@
 
 .download__os-list {
   margin: 0 auto;
-  margin-bottom: 31px;
+  margin-bottom: 15px;
   padding: 0;
 
   @media (min-width: @tablet) {
@@ -98,6 +108,10 @@
   align-items: center;
   width: 204px;
   list-style: none;
+}
+
+.download__os-logo--windows {
+  padding-top: 6px;
 }
 
 .download__availability {

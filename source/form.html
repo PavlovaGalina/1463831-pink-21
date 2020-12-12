@@ -8,7 +8,7 @@
   </head>
   <body class="page__body page__body--contest">
     <header class="page-header">
-      <div class="page-header__outer-wpapper">
+      <div class="page-header__outer-wpapper page-header__outer-wpapper--opened-menu page-header__outer-wpapper--nojs">
         <div class="page-header__wrapper">
           <div class="page-header__logo-wrapper">
             <a class="page-header__logo">
@@ -108,11 +108,11 @@
             <fieldset class="contest__contacts">
               <legend class="contest__title contest__title--contacts">Контактная информация</legend>
               <div class="contest__contacts-wrapper">
-                <div class="contest__contacts-input-wrapper">
+                <div class="contest__contacts-input-wrapper contest__contacts-input-wrapper--phone">
                   <label class="contest__label contest__input-label contest__label--contacts" for="contest__phone-number">Номер телефона</label>
                   <input class="contest__input contest__data contest__contacts-input" id="phone-number" name="phone-number" type="text" placeholder="Номер, пожалуйста">
                 </div>
-                <div class="contest__contacts-input-wrapper">
+                <div class="contest__contacts-input-wrapper contest__contacts-input-wrapper--email">
                   <label class="contest__label contest__input-label contest__label--contacts" for="email">Адрес почты</label>
                   <input class="contest__input contest__data contest__contacts-input" id="email" name="email" type="text" placeholder="Введите почту *">
                 </div>
@@ -213,16 +213,22 @@
     <script>
       var navMain = document.querySelector('.main-nav');
       var navToggle = document.querySelector('.main-nav__toggle');
+      var pageHeaderOuterWrapper = document.querySelector('.page-header__outer-wpapper');
 
       navMain.classList.remove('main-nav--nojs');
+      pageHeaderOuterWrapper.classList.remove('page-header__outer-wpapper--nojs');
 
       navToggle.addEventListener('click', function() {
         if (navMain.classList.contains('main-nav--closed')) {
           navMain.classList.remove('main-nav--closed');
           navMain.classList.add('main-nav--opened');
+          pageHeaderOuterWrapper.classList.remove('page-header__outer-wpapper--closed-menu');
+          pageHeaderOuterWrapper.classList.add('page-header__outer-wpapper--opened-menu');
         } else {
           navMain.classList.add('main-nav--closed');
           navMain.classList.remove('main-nav--opened');
+          pageHeaderOuterWrapper.classList.add('page-header__outer-wpapper--closed-menu');
+          pageHeaderOuterWrapper.classList.remove('page-header__outer-wpapper--opened-menu');
         }
       });
     </script>

@@ -21,6 +21,20 @@
   background-color: fade(@black, 30%);
 }
 
+@media (max-width: @tablet-mobile-only) {
+  .page-header__outer-wpapper--nojs {
+    background-color: @blue-grey;
+  }
+
+  .page-header__outer-wpapper--closed-menu {
+    background-color: fade(@black, 30%);
+  }
+
+  .page-header__outer-wpapper--opened-menu {
+    background-color: @blue-grey;
+  }
+}
+
 .page-header__wrapper {
   @media (min-width: @desktop) {
     width: 940px;
@@ -34,7 +48,6 @@
 
 .page-header__logo-wrapper {
   padding: 19px 20px;
-  box-shadow: 0 1px 0 @black;
 
   @media (min-width: @tablet) {
     padding: 27px 20px;
@@ -43,7 +56,6 @@
 
   @media (min-width: @desktop) {
     padding: 0;
-    box-shadow: none;
   }
 }
 

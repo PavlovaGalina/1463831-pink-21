@@ -8,7 +8,7 @@
   </head>
   <body class="page__body">
     <header class="page-header">
-      <div class="page-header__outer-wpapper">
+      <div class="page-header__outer-wpapper page-header__outer-wpapper--opened-menu page-header__outer-wpapper--nojs">
         <div class="page-header__wrapper">
           <div class="page-header__logo-wrapper">
             <a class="page-header__logo">
@@ -55,26 +55,26 @@
     <main class="page-main">
       <h1 class="visually-hidden">Pink - приложение для обработки фото</h1>
       <section class="download">
-        <div class="download__wrapper">
+        <div class="download__header">
           <div class="download__heading heading-text">
             <h2 class="visually-hidden">Скачайте приложение Pink</h2>
             <p class="download__slogan">Взгляните<br> на жизнь иначе!</p>
           </div>
-          <div class="download__content">
-            <button class="download__button button">Скачать приложение</button>
-            <ul class="download__os-list download__os">
-              <li class="download__os-item">
-                <a class="download__os-link download__os-link--ios" href="#"><img src="img/apple-logo.svg" width="47" heigth="56" alt="Скачать для IOS"></a>
-              </li>
-              <li  class="download__os-item">
-                <a class="download__os-link download__os-link--android" href="#"><img src="img/android-logo.svg" width="43" heigth="47" alt="Скачать для Android"></a>
-              </li>
-              <li  class="download__os-item">
-                <a class="download__os-link download__os-link--windows" href="#"><img src="img/microsoft-logo.svg" width="44" heigth="41" alt="Скачать для Windows"></a>
-              </li>
-            </ul>
-            <p class="download__availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-          </div>
+        </div>
+        <div class="download__content">
+          <button class="download__button button">Скачать приложение</button>
+          <ul class="download__os-list download__os">
+            <li class="download__os-item">
+              <a class="download__os-link" href="#"><img class="download__os-logo download__os-logo--ios" src="img/apple-logo.svg" width="47" heigth="56" alt="Скачать для IOS"></a>
+            </li>
+            <li  class="download__os-item">
+              <a class="download__os-link" href="#"><img class="download__os-logo download__os-logo--android" src="img/android-logo.svg" width="43" heigth="47" alt="Скачать для Android"></a>
+            </li>
+            <li  class="download__os-item">
+              <a class="download__os-link" href="#"><img class="download__os-logo download__os-logo--windows" src="img/microsoft-logo.svg" width="44" heigth="41" alt="Скачать для Windows"></a>
+            </li>
+          </ul>
+          <p class="download__availability">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
         </div>
       </section>
       <section class="description">
@@ -98,10 +98,15 @@
               <p class="description__text">Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
-          <div class="description__effect">
-            <h3 class="description__effect-heading">Эффект на 24 часа!</h3>
-            <p class="description__text description__effect-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-            <a class="description__text description__link" href="#">Узнать больше об исследовании</a>
+          <div class="description__effect-wrapper">
+            <div class="description__effect-diagram">
+              <p class="description__effect-number">24</p>
+            </div>
+            <div class="description__effect">
+              <h3 class="description__effect-heading">Эффект<br> на 24 часа!</h3>
+              <p class="description__text description__effect-text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
+              <a class="description__text description__link" href="#">Узнать больше об исследовании</a>
+            </div>
           </div>
         </div>
       </section>
@@ -141,20 +146,22 @@
           <h2 class="visually-hidden">Тарифы</h2>
           <div class="price__list slider__list">
             <table class="price__table">
-              <th class="price__rate--blank">
-              </th>
-              <th class="price__rate price__base">
-                <p class="price__heading">База</p>
-                <span class="price__value">1,99 USD</span>
-              </th>
-              <th class="price__rate price__rate--standart">
-                <p class="price__heading">Стандарт</p>
-                <span class="price__value">3,99 USD</span>
-              </th>
-              <th class="price__rate price__unlim">
-                <p class="price__heading">Анлим</p>
-                <span class="price__value">9,99 USD</span>
-              </th>
+              <tr>
+                <th class="price__rate--blank">
+                </th>
+                <th class="price__rate price__base">
+                  <p class="price__heading">База</p>
+                  <span class="price__value">1,99 USD</span>
+                </th>
+                <th class="price__rate price__rate--standart">
+                  <p class="price__heading">Стандарт</p>
+                  <span class="price__value">3,99 USD</span>
+                </th>
+                <th class="price__rate price__unlim">
+                  <p class="price__heading">Анлим</p>
+                  <span class="price__value">9,99 USD</span>
+                </th>
+              </tr>
               <tr class="price__options-list">
                 <td class="price__option--title">Розовый фильтр</td>
                 <td class="price__option price__option--yes price__base">Розовый фильтр</td>
@@ -256,16 +263,22 @@
     <script>
       var navMain = document.querySelector('.main-nav');
       var navToggle = document.querySelector('.main-nav__toggle');
+      var pageHeaderOuterWrapper = document.querySelector('.page-header__outer-wpapper');
 
       navMain.classList.remove('main-nav--nojs');
+      pageHeaderOuterWrapper.classList.remove('page-header__outer-wpapper--nojs');
 
       navToggle.addEventListener('click', function() {
         if (navMain.classList.contains('main-nav--closed')) {
           navMain.classList.remove('main-nav--closed');
           navMain.classList.add('main-nav--opened');
+          pageHeaderOuterWrapper.classList.remove('page-header__outer-wpapper--closed-menu');
+          pageHeaderOuterWrapper.classList.add('page-header__outer-wpapper--opened-menu');
         } else {
           navMain.classList.add('main-nav--closed');
           navMain.classList.remove('main-nav--opened');
+          pageHeaderOuterWrapper.classList.add('page-header__outer-wpapper--closed-menu');
+          pageHeaderOuterWrapper.classList.remove('page-header__outer-wpapper--opened-menu');
         }
       });
     </script>
