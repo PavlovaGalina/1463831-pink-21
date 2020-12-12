@@ -1,28 +1,32 @@
 .download {
   background-color: @blue-black;
-  background-image: url("../img/background-main.jpg");
-  background-position: top;
-  background-repeat: no-repeat;
   text-align: center;
 }
 
-.download__wrapper {
-  padding: 29px 20px;
-  padding-bottom: 38px;
+.download__header {
+  background: url("../img/back-mobile.jpg") top no-repeat;
+  background-color: @blue-black;
+  background-size: cover;
 
   @media (min-width: @tablet) {
-    padding: 102px 20px;
-    padding-bottom: 119px;
+    background-color: @blue-black;
+    background-image: url("../img/back-tablet.jpg");
+    background-position: 50% 15%;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
-  @media (min-width: @tablet) {
-    padding: 114px 130px;
-    padding-bottom: 130px;
+  @media (min-width: @desktop) {
+    background-image: url("../img/back-desktop.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
 .download__heading {
-  padding-bottom: 320px;
+  padding: 90px 20px;
+  padding-bottom: 315px;
   margin: 0 auto;
 
   @media (min-width: @tablet) {
@@ -35,9 +39,15 @@
 }
 
 .download__slogan {
-  max-width: 280px;
+  max-width: 300px;
   color: @white;
   margin: 0;
+
+  br {
+    @media (max-width: @mobile-only) {
+      display: none;
+    }
+  }
 }
 
 .download__content {
@@ -45,6 +55,8 @@
   flex-direction: column;
   align-items: center;
   max-width: 280px;
+  padding: 29px 20px;
+  padding-bottom: 31px;
 
   @media (min-width: @tablet) {
     max-width: 300px;
@@ -52,17 +64,28 @@
 }
 
 .download__button {
+  width: 280px;
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 33px;
+
+  &:hover {
+    color: @pink;
+    background-color: @white;
+  }
+
+  &:active {
+    color: fade(@pink, 30%);
+  }
 
   @media (min-width: @tablet) {
+    width: 300px;
     margin-bottom: 67px;
   }
 }
 
 .download__os-list {
   margin: 0 auto;
-  margin-bottom: 31px;
+  margin-bottom: 15px;
   padding: 0;
 
   @media (min-width: @tablet) {
@@ -82,6 +105,10 @@
   list-style: none;
 }
 
+.download__os-logo--windows {
+  padding-top: 6px;
+}
+
 .download__availability {
   font-size: 14px;
   line-height: 24px;
@@ -89,4 +116,8 @@
   color: @white;
   margin: 0;
   text-align: center;
+
+  @media (min-width: @tablet) {
+    font-size: 18px;
+  }
 }
