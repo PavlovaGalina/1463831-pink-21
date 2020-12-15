@@ -11,6 +11,13 @@
 
   @media (min-width: @tablet) {
     font-size: 18px;
+    padding-top: 64px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 58px;
+    padding-bottom: 69px;
   }
 }
 
@@ -19,26 +26,45 @@
   flex-direction: column;
   justify-content: center;
   background-color: @light-grey;
-  padding: 20px;
-  padding-bottom: 39px;
+  padding-top: 20px;
+  padding-bottom: 41px;
 
   @media (min-width: @tablet) {
     flex-direction: row;
+    justify-content: space-between;
+    padding: 57px 20px;
+    padding-bottom: 54px;
   }
 
   @media (min-width: @desktop) {
-    max-width: 940px;
+    max-width: 800px;
     margin: 0 auto;
+    padding-top: 56px;
+    padding-bottom: 58px;
+    padding-left: 80px;
+    padding-right: 60px;
   }
 }
 
 .editor__image {
+  display: block;
+  object-fit: cover;
   width: 280px;
   height: 374px;
+  margin: 0 auto;
 
   @media (min-width: @tablet) {
     width: 300px;
     height: 400px;
+    margin: 0;
+  }
+}
+
+.editor__tool-wrapper {
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 
@@ -46,25 +72,22 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  column-gap: 13px;
   margin: 0;
-  margin-bottom: 109px;
+  margin-bottom: 38px;
   padding: 0;
+  padding-bottom: 72px;
   padding-left: 8px;
   padding-top: 42px;
   list-style: none;
+  border-bottom: 1px solid fade(@blue-grey, 10%);
 
   @media (min-width: @tablet) {
     flex-direction: column;
-  }
-}
-
-.editor__tool-button {
-  border: none;
-  background-color: transparent;
-  margin-right: 23px;
-
-  &:last-child {
-    margin-right: 0;
+    column-gap: 0;
+    padding: 0;
+    margin-bottom: 0;
+    border-bottom: none;
   }
 }
 
@@ -73,9 +96,85 @@
   display: flex;
 
   @media (min-width: @tablet) {
+    width: 275px;
     margin-right: 0;
     flex-direction: row;
     align-items: center;
+    border-bottom: 1px solid @grey;
+  }
+
+  @media (min-width: @desktop) {
+    width: 410px;
+  }
+}
+
+.editor__tool-button {
+  background-color: transparent;
+  margin-right: 23px;
+  padding: 0;
+  border: none;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (min-width: @tablet) {
+    width: 30px;
+    margin: 0;
+  }
+
+  @media (min-width: @tablet) {
+    width: 50px;
+  }
+}
+
+.editor__tool-icon {
+  width: 100%;
+  height: auto;
+
+  path {
+    fill: fade(@blue-grey, 30%);
+  }
+
+  &--active path {
+    fill: @pink;
+  }
+
+  &:hover path {
+    fill: fade(@blue-grey, 50%);
+  }
+
+  @media (min-width: @tablet) {
+    &:hover path,
+    path {
+      fill: @pink;
+    }
+
+    &--crop {
+      width: 22px;
+    }
+
+    &--fill {
+      width: 24px;
+    }
+
+    &--contrast {
+      width: 16px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    &--crop {
+      width: 44px;
+    }
+
+    &--fill {
+      width: 48px;
+    }
+
+    &--contrast {
+      width: 32px;
+    }
   }
 }
 
@@ -87,15 +186,28 @@
     @media (max-width: @tablet) {
       position: absolute;
       display: block;
-      bottom: -36px;
-      left: -10px;
+      bottom: -38px;
+      left: -15px;
     }
   }
 
   @media (min-width: @tablet) {
     display: block;
+    margin-right: 18px;
+    margin-left: auto;
+    padding-top: 35px;
+    padding-bottom: 34px;
+
+    &--crop {
+      padding-top: 19px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    margin-right: 30px;
   }
 }
+
 
 .editor__bar {
   height: 2px;
@@ -103,6 +215,14 @@
   margin: 0 auto;
   margin-bottom: 0;
   background-color: @blue-grey;
+
+  @media (min-width: @tablet) {
+    width: 202px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 288px;
+  }
 }
 
 .editor__toggle {
@@ -120,14 +240,35 @@
     left: 193px;
   }
 
-  &--fill {
-    top: -5px;
-    left: 25px;
+  &:active {
+    background-color: @pink;
   }
 
-  &--contrast {
-    top: -5px;
-    left: 96px;
+  @media (min-width: @tablet) {
+    &--crop {
+      top: 14px;
+      left: 146px;
+    }
+
+    &--fill {
+      top: 29px;
+      left: 247px;
+    }
+
+    &--contrast {
+      top: 29px;
+      left: 96px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    &--crop {
+      left: 69px;
+    }
+
+    &--contrast {
+      left: 160px;
+    }
   }
 }
 
@@ -138,6 +279,7 @@
 
   @media (min-width: @desktop) {
     flex-direction: row;
+    justify-content: space-between;
   }
 }
 
@@ -146,6 +288,28 @@
   margin-bottom: 12px;
   color: @pink;
   border: 3px solid @pink;
+  cursor: pointer;
+
+  &:hover {
+    color: @white;
+    background-color: @pink;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+  }
+
+  @media (min-width: @tablet) {
+    width: 260px;
+    margin-bottom: 24px;
+    margin-right: 10px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 183px;
+    font-size: 18px;
+    margin-bottom: 0;
+  }
 }
 
 .editor__cancel-button {
@@ -153,4 +317,25 @@
   color: @blue-grey;
   border: 3px solid @blue-grey;
   opacity: 0.1;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: @blue-grey;
+  }
+
+  @media (min-width: @tablet) {
+    width: 260px;
+    margin-right: 10px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 183px;
+    font-size: 18px;
+    margin-right: 0;
+  }
 }

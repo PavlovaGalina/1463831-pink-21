@@ -1,9 +1,23 @@
 .price {
   background-color: @white;
-  background-image: url("../img/grey-background.svg");
-  background-position: 95% bottom;
+  background-image: url("../img/grey-background-price-mobile.svg");
+  background-position: center bottom;
   background-repeat: no-repeat;
-  background-size: 290%;
+  background-size: 1214px 506px;
+
+  @media (min-width: @tablet) {
+    background-image: url("../img/grey-background-price-tablet.svg");
+    background-position: center top -5px;
+    background-repeat: no-repeat;
+    background-size: 1200px 534px;
+  }
+
+  @media (min-width: @desktop) {
+    background-image: url("../img/grey-background-price-desktop.svg");
+    background-position: center bottom -30px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .price__wrapper {
@@ -11,14 +25,14 @@
   padding-bottom: 48px;
 
   @media (min-width: @tablet) {
-    padding: 117px 20px;
-    padding-bottom: 70px;
+    padding: 98px 18px;
+    padding-bottom: 67px;
   }
 
   @media (min-width: @desktop) {
     max-width: 940px;
-    padding-top: 159px;
-    padding-bottom: 98px;
+    padding-top: 190px;
+    padding-bottom: 92px;
     margin: 0 auto;
   }
 }
@@ -35,6 +49,7 @@
   @media (min-width: @tablet) {
     overflow: visible;
     width: 100%;
+    height: auto;
     margin: 0;
   }
 
@@ -46,6 +61,11 @@
 .price__table {
   position: absolute;
   width: 832px;
+
+  @media (min-width: @tablet) {
+    position: static;
+    width: 100%;
+  }
 }
 
 .price__rate {
@@ -56,24 +76,21 @@
   text-align: center;
 
   @media (min-width: @tablet) {
-    width: 152px;
-    padding: 0;
-    padding-bottom: 16px;
+    min-width: 154px;
+    width: 25%;
+    padding: 12px 0;
+    padding-bottom: 10px;
   }
 
-  @media (min-width: @tablet) {
+  @media (min-width: @desktop) {
     width: 233px;
-    padding: 23px 0;
-    padding-bottom: 25px;
+    padding: 16px 0;
+    padding-bottom: 22px;
   }
 }
 
 .price__rate--blank {
   display: none;
-  width: 100%;
-  background-color: @white;
-  padding: 19px 90px;
-  padding-bottom: 35px;
 
   @media (min-width: @tablet) {
     display: block;
@@ -103,6 +120,18 @@
   background-image: url("../img/hit-ribbon.svg");
   background-position: top;
   background-repeat: no-repeat;
+
+  @media (min-width: @tablet) {
+    width: 61px;
+    height: 61px;
+    background-position: center -5px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 74px;
+    height: 74px;
+    background-position: center;
+  }
 }
 
 .price__rate--standart::after {
@@ -116,6 +145,16 @@
   color: @white;
   text-transform: uppercase;
   transform: rotate(-45deg);
+
+  @media (min-width: @tablet) {
+    top: 9px;
+    left: 9px;
+  }
+
+  @media (min-width: @desktop) {
+    top: 14px;
+    left: 14px;
+  }
 }
 
 .price__heading {
@@ -161,14 +200,15 @@
   @media (min-width: @tablet) {
     display: table-cell;
     width: 152px;
-    height: 45px;
+    height: 43px;
     padding-left: 15px;
     text-transform: capitalize;
+    background-color: @white;
   }
 
   @media (min-width: @desktop) {
     width: 233px;
-    height: 59px;
+    height: 58px;
     font-size: 18px;
     padding-left: 22px;
   }
@@ -182,13 +222,13 @@
 
   @media (min-width: @tablet) {
     width: 152px;
-    height: 45px;
+    height: 43px;
     color: transparent;
   }
 
   @media (min-width: @desktop) {
     width: 233px;
-    height: 59px;
+    height: 58px;
   }
 }
 
