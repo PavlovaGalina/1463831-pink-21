@@ -1,26 +1,31 @@
 .download {
   background-color: @blue-black;
   text-align: center;
-}
-
-.download__header {
-  background: url("../img/back-mobile.jpg") top no-repeat;
-  background-color: @blue-black;
-  background-size: cover;
 
   @media (min-width: @tablet) {
-    background-color: @blue-black;
-    background-image: url("../img/back-tablet.jpg");
-    background-position: 50% 15%;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url("../img/screen.jpg") right 94px bottom 145px no-repeat,
+      url("../img/phone-tablet.png") right bottom no-repeat,
+      url("../img/back-tablet.jpg") bottom no-repeat;
+    background-size: 195px 346px, 660px 545px, cover;
   }
 
   @media (min-width: @desktop) {
-    background-image: url("../img/back-desktop.jpg");
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: url("../img/screen.jpg") right 250px bottom 173px no-repeat,
+      url("../img/phone-desktop.png") right bottom no-repeat,
+      url("../img/back-desktop.jpg") bottom no-repeat;
+    background-size: 230px 408px, 1050px 645px, cover;
+  }
+}
+
+.download__header {
+  background: url("../img/screen.jpg") center bottom 57px no-repeat,
+    url("../img/phone-mobile.png") bottom no-repeat,
+    url("../img/back-mobile.jpg") top no-repeat;
+  background-color: @blue-black;
+  background-size: 111px 197px, 320px 286px, cover;
+
+  @media (min-width: @tablet) {
+    background: transparent;
   }
 }
 
@@ -30,11 +35,14 @@
   margin: 0 auto;
 
   @media (min-width: @tablet) {
-    padding-bottom: 39px;
+    padding-top: 203px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop) {
-    padding-bottom: 50px;
+    max-width: 940px;
+    padding: 238px 0;
+    padding-bottom: 0;
   }
 }
 
@@ -60,6 +68,16 @@
 
   @media (min-width: @tablet) {
     max-width: 300px;
+    padding-top: 31px;
+    padding-bottom: 114px;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: 940px;
+    align-items: flex-start;
+    padding-top: 36px;
+    padding-bottom: 127px;
+    margin: 0 auto;
   }
 }
 
@@ -79,7 +97,11 @@
 
   @media (min-width: @tablet) {
     width: 300px;
-    margin-bottom: 67px;
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-bottom: 68px;
   }
 }
 
@@ -89,11 +111,14 @@
   padding: 0;
 
   @media (min-width: @tablet) {
-    margin-bottom: 38px;
+    margin-bottom: 27px;
   }
 
   @media (min-width: @desktop) {
-    margin-bottom: 58px;
+    margin: 0;
+    margin-left: 46px;
+    margin-right: auto;
+    margin-bottom: 46px;
   }
 }
 
@@ -103,6 +128,10 @@
   align-items: center;
   width: 204px;
   list-style: none;
+
+  @media (min-width: @tablet) {
+    width: 208px;
+  }
 }
 
 .download__os-logo--windows {
@@ -118,6 +147,7 @@
   text-align: center;
 
   @media (min-width: @tablet) {
+    max-width: 300px;
     font-size: 18px;
   }
 }

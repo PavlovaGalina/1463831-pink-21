@@ -3,15 +3,13 @@
   padding-top: 43px;
 
   @media (min-width: @tablet) {
-    padding-top: 55px;
-    padding-bottom: 98px;
+    padding-top: 44px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop) {
-    width: 940px;
     margin: 0 auto;
-    padding-top: 74px;
-    padding-bottom: 123px;
+    padding-top: 60px;
   }
 }
 
@@ -24,11 +22,14 @@
 
   @media (min-width: @tablet) {
     max-width: 370px;
+    margin-bottom: 33px;
+    line-height: 54px;
   }
 
   @media (min-width: @desktop) {
     max-width: 465px;
     margin-bottom: 41px;
+    line-height: 68px;
   }
 }
 
@@ -45,8 +46,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 97px;
+    column-gap: 80px;
     row-gap: 42px;
+    margin-bottom: 23px;
   }
 
   @media (min-width: @desktop) {
@@ -78,9 +80,14 @@
   align-self: center;
   margin-bottom: 18px;
   padding: 0;
+  flex: 1;
 
   @media (min-width: @tablet) {
     margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop) {
+    align-self: flex-start;
   }
 }
 
@@ -92,7 +99,7 @@
   margin: 0;
 
   @media (min-width: @tablet) {
-    margin-bottom: 7px;
+    margin-bottom: 3px;
   }
 
   @media (min-width: @desktop) {
@@ -123,11 +130,47 @@
 }
 
 .contacts__map {
+  position: relative;
   width: 100%;
   height: 200px;
+  background: url("../img/triangle-white-footer-mobile.svg") top -90px center no-repeat,
+    url("../img/map.png") center no-repeat;
+  background-size: 1200px 123px, cover;
   background-color: @light-grey;
-  background-image: url("../img/map.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+  @media (min-width: @tablet) {
+    height: 374px;
+    background: url("../img/triangle-white-footer-tablet.svg") top -55px center no-repeat,
+      url("../img/map.png") center no-repeat;
+    background-size: 1200px 123px, cover;
+  }
+
+  @media (min-width: @desktop) {
+    height: 500px;
+    background: url("../img/triangle-white-footer-desktop.svg") top -20px center no-repeat,
+      url("../img/map.png") center no-repeat;
+    background-size: contain, cover;
+  }
+}
+
+.contacts__map::before {
+  position: absolute;
+  content: "";
+  width: 16px;
+  left: 44%;
+  top: 95px;
+  height: 16px;
+  background-color: @pink;
+  border: 10px solid @white;
+  border-radius: 50%;
+
+  @media (min-width: @tablet) {
+    left: 47%;
+    top: 194px;
+  }
+
+  @media (min-width: @desktop) {
+    left: 49%;
+    top: 260px;
+  }
 }

@@ -7,13 +7,14 @@
   padding-bottom: 14px;
 
   @media (min-width: @tablet) {
-    padding-top: 109px;
+    padding-top: 97px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop) {
     max-width: 940px;
-    padding-top: 193px;
-    padding-bottom: 41px;
+    padding: 0;
+    padding-top: 186px;
     margin: 0 auto;
   }
 }
@@ -25,10 +26,15 @@
   padding: 0;
   list-style: none;
 
+  @media (min-width: @tablet) {
+    margin-bottom: 37px;
+  }
+
   @media (min-width: @desktop) {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-bottom: 0;
   }
 }
 
@@ -38,8 +44,8 @@
     content: "";
     width: 79px;
     height: 63px;
-    top: -120px;
-    left: 450px;
+    top: -115px;
+    left: 432px;
     background-image: url("../img/quotes.svg");
     background-repeat: no-repeat;
     background-position: center;
@@ -71,11 +77,12 @@
 
   @media (min-width: @tablet) {
     font-size: 20px;
-    margin-bottom: 3px;
+    margin-bottom: 0;
   }
 
   @media (min-width: @desktop) {
     font-size: 24px;
+    margin-bottom: 2px;
   }
 }
 
