@@ -183,7 +183,7 @@
   display: none;
 
   &--active {
-    @media (max-width: @tablet) {
+    @media (max-width: @mobile-only) {
       position: absolute;
       display: block;
       bottom: -38px;
@@ -252,7 +252,7 @@
 
     &--fill {
       top: 29px;
-      left: 247px;
+      left: 25px;
     }
 
     &--contrast {
@@ -264,6 +264,10 @@
   @media (min-width: @desktop) {
     &--crop {
       left: 69px;
+    }
+
+    &--fill {
+      left: 247px;
     }
 
     &--contrast {
