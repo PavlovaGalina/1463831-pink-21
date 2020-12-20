@@ -77,3 +77,36 @@
     fill: fade(@white, 30%);
   }
 }
+
+.page-header__logo-image--mobile {
+  width: 74px;
+  height: 23px;
+
+  @media (min-width: @tablet) {
+    display: none;
+  }
+}
+
+.page-header__logo-image--tablet {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: block;
+    width: 145px;
+    height: 40px;
+  }
+
+  @media (min-width: @desktop) {
+    display: none;
+  }
+}
+
+.page-header__logo-image--desktop {
+  display: none;
+
+  @media (min-width: @desktop) {
+    display: block;
+    width: 147px;
+    height: 40px;
+  }
+}
