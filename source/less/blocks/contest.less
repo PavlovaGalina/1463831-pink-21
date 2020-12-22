@@ -1,23 +1,32 @@
 .contest__header {
-  background-color: @blue-black;
-  background-image: url("../img/back-mobile.jpg");
-  background-position: top;
-  background-repeat: no-repeat;
+  background: url("../img/back-mobile.jpg") top no-repeat;
   background-size: cover;
+  background-color: @blue-black;
 
-  @media (min-width: @tablet) {
-    background-color: @blue-black;
-    background-image: url("../img/back-tablet.jpg");
-    background-position: 50% 15%;
-    background-repeat: no-repeat;
+  @media (min-resolution: 2dppx) {
+    background: url("../img/back-mobile@2x.jpg") top no-repeat;
     background-size: cover;
   }
 
-  @media (min-width: @desktop) {
-    background-image: url("../img/back-desktop.jpg");
-    background-position: top;
-    background-repeat: no-repeat;
+  @media (min-width: @tablet) {
+    background: url("../img/back-tablet.jpg") 50% 15% no-repeat;
     background-size: cover;
+    background-color: @blue-black;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/back-tablet@2x.jpg") 50% 15% no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    background: url("../img/back-desktop.jpg") top no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/back-desktop@2x.jpg") top no-repeat;
+      background-size: cover;
+    }
   }
 }
 

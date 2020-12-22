@@ -3,26 +3,47 @@
   text-align: center;
 
   @media (min-width: @tablet) {
-    background: url("../img/screen.jpg") right 94px bottom 145px no-repeat,
+    background: url("../img/screen-tablet.jpg") right 94px bottom 145px no-repeat,
       url("../img/phone-tablet.png") right bottom no-repeat,
       url("../img/back-tablet.jpg") bottom no-repeat;
     background-size: 195px 346px, 660px 545px, cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/screen-tablet@2x.jpg") right 94px bottom 145px no-repeat,
+        url("../img/phone-tablet@2x.png") right bottom no-repeat,
+        url("../img/back-tablet@2x.jpg") bottom no-repeat;
+      background-size: 195px 346px, 660px 545px, cover;
+    }
   }
 
   @media (min-width: @desktop) {
-    background: url("../img/screen.jpg") right 250px bottom 173px no-repeat,
+    background: url("../img/screen-desktop.jpg") right 250px bottom 173px no-repeat,
       url("../img/phone-desktop.png") right bottom no-repeat,
       url("../img/back-desktop.jpg") bottom no-repeat;
     background-size: 230px 408px, 1050px 645px, cover;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/screen-desktop@2x.jpg") right 250px bottom 173px no-repeat,
+        url("../img/phone-desktop@2x.png") right bottom no-repeat,
+        url("../img/back-desktop@2x.jpg") bottom no-repeat;
+      background-size: 230px 408px, 1050px 645px, cover;
+    }
   }
 }
 
 .download__header {
-  background: url("../img/screen.jpg") center bottom 57px no-repeat,
+  background: url("../img/screen-mobile.jpg") center bottom 57px no-repeat,
     url("../img/phone-mobile.png") bottom no-repeat,
     url("../img/back-mobile.jpg") top no-repeat;
   background-color: @blue-black;
   background-size: 111px 197px, 320px 286px, cover;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/screen-mobile@2x.jpg") center bottom 57px no-repeat,
+      url("../img/phone-mobile@2x.png") bottom no-repeat,
+      url("../img/back-mobile@2x.jpg") top no-repeat;
+    background-size: 111px 197px, 320px 286px, cover;
+  }
 
   @media (min-width: @tablet) {
     background: transparent;
