@@ -279,6 +279,10 @@
   }
 }
 
+.contest__data--checkbox {
+  cursor: pointer;
+}
+
 .contest__checkbox-item {
   position: relative;
   margin-bottom: 52px;
@@ -417,10 +421,10 @@
   @media (min-width: @tablet) {
     position: absolute;
     content: "";
-    width: 61px;
-    height: 62px;
-    right: 0;
-    top: 0;
+    width: 59px;
+    height: 59px;
+    right: 2px;
+    top: 2px;
     background: url("../img/phone-icon.svg") center no-repeat;
     background-color: @grey;
   }
@@ -430,10 +434,10 @@
   @media (min-width: @tablet) {
     position: absolute;
     content: "";
-    width: 61px;
-    height: 62px;
-    right: 0;
-    top: 0;
+    width: 59px;
+    height: 59px;
+    right: 2px;
+    top: 2px;
     background: url("../img/mail-icon.svg") center no-repeat;
     background-color: @grey;
   }
@@ -501,6 +505,10 @@
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.contest__data--radio {
+  cursor: pointer;
 }
 
 .filter-radio + .contest__data::before {
@@ -620,6 +628,7 @@
   align-self: center;
   margin-bottom: 34px;
   order: 6;
+  cursor: pointer;
 
   @media (min-width: @tablet) {
     width: 300px;
