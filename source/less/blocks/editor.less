@@ -130,22 +130,21 @@
 .editor__tool-icon {
   width: 100%;
   height: auto;
+  fill: fade(@blue-grey, 30%);
 
-  path {
-    fill: fade(@blue-grey, 30%);
-  }
-
-  &--active path {
-    fill: @pink;
-  }
-
-  &:hover path {
+  &:hover {
     fill: fade(@blue-grey, 50%);
   }
 
+  &--active,
+  &--active:hover {
+    fill: @pink;
+  }
+
   @media (min-width: @tablet) {
-    &:hover path,
-    path {
+    fill: @pink;
+
+    &:hover {
       fill: @pink;
     }
 
