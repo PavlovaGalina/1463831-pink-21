@@ -43,7 +43,6 @@
   height: 285px;
   overflow: hidden;
   display: flex;
-  justify-content: center;
   margin-bottom: 41px;
 
   @media (min-width: @tablet) {
@@ -56,6 +55,18 @@
   @media (min-width: @desktop) {
     width: 940px;
   }
+}
+
+.price__list--base {
+  justify-content: left;
+}
+
+.price__list--standart {
+  justify-content: center;
+}
+
+.price__list--unlim {
+  justify-content: right;
 }
 
 .price__table {

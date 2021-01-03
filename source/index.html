@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="page-header">
@@ -64,24 +64,24 @@
           </div>
         </div>
         <div class="download__content">
-          <button class="download__button button">Скачать приложение</button>
+          <a class="download__button button" href="https://www.apple.com/ru/app-store/">Скачать приложение</a>
           <ul class="download__os-list download__os">
             <li class="download__os-item">
-              <a class="download__os-link" href="#">
+              <a class="download__os-link" href="https://www.apple.com/ru/app-store/">
                 <svg class="download__os-logo download__os-logo--ios" width="47" heigth="56">
                   <use xlink:href="#icon-ios"></use>
                 </svg>
               </a>
             </li>
             <li  class="download__os-item">
-              <a class="download__os-link" href="#">
+              <a class="download__os-link" href="https://play.google.com/store?hl=ru&gl=US">
                 <svg class="download__os-logo download__os-logo--android" width="43" heigth="47">
                   <use xlink:href="#icon-android"></use>
                 </svg>
               </a>
             </li>
             <li  class="download__os-item">
-              <a class="download__os-link" href="#">
+              <a class="download__os-link" href="https://www.microsoft.com/ru-ru/store/apps/windows">
                 <svg class="download__os-logo download__os-logo--windows" width="44" heigth="41">
                   <use xlink:href="#icon-windows"></use>
                 </svg>
@@ -167,12 +167,12 @@
       <section class="price">
         <div class="price__wrapper slider">
           <h2 class="visually-hidden">Тарифы</h2>
-          <div class="price__list slider__list">
+          <div class="price__list price__list--standart">
             <table class="price__table">
               <tr class="price__rate-list">
                 <th class="price__rate price__rate--blank">
                 </th>
-                <th class="price__rate price__base">
+                <th class="price__rate">
                   <p class="price__heading">База</p>
                   <span class="price__value">1,99 USD</span>
                 </th>
@@ -180,7 +180,7 @@
                   <p class="price__heading">Стандарт</p>
                   <span class="price__value">3,99 USD</span>
                 </th>
-                <th class="price__rate price__unlim">
+                <th class="price__rate">
                   <p class="price__heading">Анлим</p>
                   <span class="price__value">9,99 USD</span>
                 </th>
@@ -206,9 +206,9 @@
             </table>
           </div>
           <p class="price__toggles slider__toggles">
-            <button class="slider__toggle" type="button"><span class="visually-hidden">1</span></button>
-            <button class="slider__toggle slider__toggle--current" type="button"><span class="visually-hidden">2</span></button>
-            <button class="slider__toggle" type="button"><span class="visually-hidden">3</span></button>
+            <button class="price__toggle price__toggle--base slider__toggle" type="button"><span class="visually-hidden">1</span></button>
+            <button class="price__toggle price__toggle--standart slider__toggle slider__toggle--current" type="button"><span class="visually-hidden">2</span></button>
+            <button class="price__toggle price__toggle--unlim slider__toggle" type="button"><span class="visually-hidden">3</span></button>
           </p>
         </div>
       </section>
@@ -286,7 +286,7 @@
       </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="js/script.min.js"></script>
 
     <svg style="display: none">
       <symbol viewBox="0 0 74 23" id="logo-mobile">
