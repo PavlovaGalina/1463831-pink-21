@@ -38,14 +38,15 @@ exports.styles = styles;
 const html = () => {
   return gulp.src("source/*.html")
   .pipe(htmlmin({collapseWhitespace: true}))
-  .pipe(gulp.dest("build"));
+  .pipe(gulp.dest("build"))
+  .pipe(sync.stream());
 }
 
 // Scripts
 
 const scripts = () => {
   return gulp.src("source/js/script.js")
-  //.pipe(uglify())
+  .pipe(uglify())
   .pipe(rename("script.min.js"))
   .pipe(gulp.dest("build/js"))
   .pipe(sync.stream());
@@ -56,13 +57,13 @@ exports.scripts = scripts;
 // Images
 
 const images = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
+      imagemin.mozjpeg({quality: 75, progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.svg()
+      imagemin.svgo()
     ]))
-    .pipe(gulp.dest("build/img"));
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.images = images;
@@ -71,7 +72,7 @@ exports.images = images;
 
 const createWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
-  .pipe(webp({quality: 90}))
+  .pipe(webp({quality: 70}))
   .pipe(gulp.dest("build/img"));
 }
 
@@ -80,7 +81,7 @@ exports.createWebp = createWebp;
 // Sprite
 
 const sprite = () => {
-  return gulp.src("source/img/icons/*.{svg}")
+  return gulp.src("source/img/icons/*.svg")
   .pipe(svgstore())
   .pipe(rename("sprite.svg"))
   .pipe(gulp.dest("build/img"));
@@ -128,8 +129,9 @@ exports.server = server;
 // Watcher
 
 const watcher = () => {
-  gulp.watch("source/less/**/*.less", gulp.series("styles"));
-  gulp.watch("source/*.html", gulp.series(html, sync.reload));
+  gulp.watch("source/less/**/*.less", gulp.series(styles));
+  gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/*.html", gulp.series(html));
 }
 
 // Build

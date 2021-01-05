@@ -58,7 +58,7 @@
 }
 
 .price__list--base {
-  justify-content: left;
+  justify-content: flex-start;
 }
 
 .price__list--standart {
@@ -66,7 +66,7 @@
 }
 
 .price__list--unlim {
-  justify-content: right;
+  justify-content: flex-end;
 }
 
 .price__table {
@@ -209,7 +209,7 @@
   @media (min-width: @tablet) {
     width: 152px;
     height: 43px;
-    color: transparent;
+    font-size: 0;
   }
 
   @media (min-width: @desktop) {
@@ -227,6 +227,7 @@
   @media (min-width: @tablet) {
     display: table-cell;
     height: 43px;
+    font-size: 14px;
     padding-left: 15px;
     text-transform: capitalize;
     background-color: @white;
@@ -294,4 +295,8 @@
   @media (min-width: @tablet) {
     display: none;
   }
+}
+
+.price__toggle {
+  cursor: pointer;
 }
