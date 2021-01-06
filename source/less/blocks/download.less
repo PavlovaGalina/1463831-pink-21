@@ -70,12 +70,17 @@
 .download__slogan {
   max-width: 300px;
   color: @white;
-  margin: 0;
+  margin: 0 auto;
 
   br {
     @media (max-width: @mobile-only) {
       display: none;
     }
+  }
+
+  @media (min-width: @tablet) {
+    margin: 0;
+    margin-right: auto;
   }
 }
 
@@ -86,11 +91,14 @@
   max-width: 280px;
   padding: 29px 20px;
   padding-bottom: 31px;
+  margin: 0 auto;
 
   @media (min-width: @tablet) {
     max-width: 300px;
     padding-top: 31px;
     padding-bottom: 114px;
+    margin: 0;
+    margin-right: auto;
   }
 
   @media (min-width: @desktop) {
