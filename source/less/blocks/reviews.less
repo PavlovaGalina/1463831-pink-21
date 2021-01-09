@@ -1,0 +1,160 @@
+.reviews {
+  background-color: @white;
+}
+
+.reviews__wrapper {
+  padding: 41px 20px;
+  padding-bottom: 14px;
+
+  @media (min-width: @tablet) {
+    padding-top: 97px;
+    padding-bottom: 0;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: 940px;
+    padding: 0;
+    padding-top: 186px;
+    margin: 0 auto;
+  }
+}
+
+.reviews__list {
+  position: relative;
+  margin: 0;
+  margin-bottom: 32px;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: @tablet) {
+    margin-bottom: 37px;
+  }
+
+  @media (min-width: @desktop) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
+}
+
+.reviews__list::before {
+  @media (min-width: @desktop) {
+    position: absolute;
+    content: "";
+    width: 79px;
+    height: 63px;
+    top: -115px;
+    left: 432px;
+    background-image: url("../img/quotes.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.reviews__item {
+  margin: 0;
+  text-align: center;
+
+  @media (min-width: @desktop) {
+    max-width: 690px;
+  }
+}
+
+.reviews__author-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews__author-name {
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 700;
+  font-style: normal;
+  color: @black;
+  margin: 0;
+  margin-bottom: 13px;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop) {
+    font-size: 24px;
+    margin-bottom: 2px;
+  }
+}
+
+.reviews__author-data {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+
+  @media (min-width: @desktop) {
+    font-size: 18px;
+  }
+}
+
+.reviews__text {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @blue-grey;
+  margin: 0;
+
+  @media (min-width: @tablet) {
+    font-size: 18px;
+    order: -1;
+    margin-bottom: 35px;
+  }
+}
+
+.reviews__prev {
+  display: none;
+
+  @media (min-width: @desktop) {
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin-top: 26px;
+    order: -1;
+  }
+}
+
+.reviews__next {
+  display: none;
+
+  @media (min-width: @desktop) {
+    display: block;
+    background-color: transparent;
+    border: none;
+    margin-top: 26px;
+  }
+}
+
+.reviews__prev-icon,
+.reviews__next-icon {
+  fill: fade(@blue-grey, 30%);
+
+  &:hover {
+    fill: fade(@blue-grey, 60%);
+  }
+
+  &:active {
+    fill: fade(@blue-grey, 10%);
+  }
+}
+
+.reviews__toggles {
+  margin: 0;
+
+  @media (min-width: @desktop) {
+    display: none;
+  }
+}

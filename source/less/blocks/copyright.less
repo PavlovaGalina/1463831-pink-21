@@ -1,0 +1,33 @@
+.copyright {
+  display: flex;
+  align-items: center;
+
+  @media (min-width: @tablet) {
+    padding-top: 8px;
+  }
+}
+
+.copyright__text {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @blue-grey;
+  margin: 0;
+  margin-right: 15px;
+
+  @media (min-width: @desktop) {
+    font-size: 18px;
+  }
+}
+
+.copyright__logo svg path {
+  fill: green;
+
+  &:hover path {
+    fill: @blue-grey;
+  }
+
+  &:active path {
+    fill: fade(@blue-grey, 30%);
+  }
+}

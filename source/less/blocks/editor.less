@@ -1,0 +1,345 @@
+.editor__text {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  background-color: @white;
+  color: @blue-grey;
+  text-align: center;
+  margin: 0;
+  padding: 43px 20px;
+  padding-bottom: 42px;
+
+  @media (min-width: @tablet) {
+    font-size: 18px;
+    padding-top: 64px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 58px;
+    padding-bottom: 69px;
+  }
+}
+
+.editor__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: @light-grey;
+  padding-top: 20px;
+  padding-bottom: 41px;
+
+  @media (min-width: @tablet) {
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 45px;
+    padding: 57px 20px;
+    padding-bottom: 54px;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: 800px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding-top: 56px;
+    padding-bottom: 58px;
+    padding-left: 80px;
+    padding-right: 60px;
+  }
+}
+
+.editor__image {
+  display: block;
+  width: 280px;
+  height: 374px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet) {
+    width: 300px;
+    height: 400px;
+    margin: 0;
+  }
+}
+
+.editor__tool-wrapper {
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.editor__tool-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 13px;
+  margin: 0;
+  margin-bottom: 38px;
+  padding: 0;
+  padding-bottom: 72px;
+  padding-left: 8px;
+  padding-top: 42px;
+  list-style: none;
+  border-bottom: 1px solid fade(@blue-grey, 10%);
+
+  @media (min-width: @tablet) {
+    flex-direction: column;
+    column-gap: 0;
+    padding: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+  }
+}
+
+.editor__tool {
+  position: relative;
+  display: flex;
+
+  @media (min-width: @tablet) {
+    width: 275px;
+    margin-right: 0;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid @grey;
+  }
+
+  @media (min-width: @desktop) {
+    width: 410px;
+  }
+}
+
+.editor__tool-button {
+  background-color: transparent;
+  margin-right: 23px;
+  padding: 0;
+  border: none;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media (min-width: @tablet) {
+    width: 30px;
+    margin: 0;
+  }
+
+  @media (min-width: @tablet) {
+    width: 50px;
+  }
+}
+
+.editor__tool-icon {
+  width: 100%;
+  height: auto;
+  fill: fade(@blue-grey, 30%);
+
+  &:hover {
+    fill: fade(@blue-grey, 50%);
+  }
+
+  &--active,
+  &--active:hover {
+    fill: @pink;
+  }
+
+  @media (min-width: @tablet) {
+    fill: @pink;
+
+    &:hover {
+      fill: @pink;
+    }
+
+    &--crop {
+      width: 22px;
+    }
+
+    &--fill {
+      width: 24px;
+    }
+
+    &--contrast {
+      width: 16px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    &--crop {
+      width: 44px;
+    }
+
+    &--fill {
+      width: 48px;
+    }
+
+    &--contrast {
+      width: 32px;
+    }
+  }
+}
+
+.editor__control {
+  position: relative;
+  display: none;
+
+  &--active {
+    @media (max-width: @mobile-only) {
+      position: absolute;
+      display: block;
+      bottom: -38px;
+      left: -15px;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    display: block;
+    margin-right: 18px;
+    margin-left: auto;
+    padding-top: 35px;
+    padding-bottom: 34px;
+
+    &--crop {
+      padding-top: 19px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    margin-right: 30px;
+  }
+}
+
+
+.editor__bar {
+  height: 2px;
+  width: 240px;
+  margin: 0 auto;
+  margin-bottom: 0;
+  background-color: @blue-grey;
+
+  @media (min-width: @tablet) {
+    width: 202px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 288px;
+  }
+}
+
+.editor__toggle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 2px solid @pink;
+  background-color: @white;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--crop {
+    top: -5px;
+    left: 193px;
+  }
+
+  &:active {
+    background-color: @pink;
+  }
+
+  @media (min-width: @tablet) {
+    &--crop {
+      top: 14px;
+      left: 146px;
+    }
+
+    &--fill {
+      top: 29px;
+      left: 25px;
+    }
+
+    &--contrast {
+      top: 29px;
+      left: 96px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    &--crop {
+      left: 69px;
+    }
+
+    &--fill {
+      left: 247px;
+    }
+
+    &--contrast {
+      left: 160px;
+    }
+  }
+}
+
+.editor__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.editor__post-button {
+  width: 280px;
+  margin-bottom: 12px;
+  color: @pink;
+  border: 3px solid @pink;
+  cursor: pointer;
+
+  &:hover {
+    color: @white;
+    background-color: @pink;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+  }
+
+  @media (min-width: @tablet) {
+    width: 260px;
+    margin-bottom: 24px;
+    margin-right: 10px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 183px;
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+}
+
+.editor__cancel-button {
+  width: 280px;
+  color: @blue-grey;
+  border: 3px solid @blue-grey;
+  opacity: 0.1;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    color: fade(@white, 30%);
+    background-color: @blue-grey;
+  }
+
+  @media (min-width: @tablet) {
+    width: 260px;
+    margin-right: 10px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 183px;
+    font-size: 18px;
+    margin-right: 0;
+  }
+}
