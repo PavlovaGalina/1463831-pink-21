@@ -41,7 +41,7 @@
   }
 
   @media (min-width: @desktop) {
-    padding-top: 61px;
+    padding-top: 62px;
     padding-bottom: 0;
   }
 }
@@ -68,15 +68,22 @@
   }
 }
 
+.description__answer {
+  @media (min-width: @tablet) {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @desktop) {
+    max-width: 450px;
+  }
+}
+
 .description__features-list {
   margin: 0;
   padding: 0;
   padding-bottom: 318px;
   list-style: none;
-
-  br {
-    display: none;
-  }
 
   @media (min-width: @tablet) {
     text-align: left;
@@ -93,33 +100,29 @@
         url("../img/grey-background-tablet@2x.svg") center top 5px no-repeat;
       background-size: 237px 421px, 268px 547px, 1200px 695px;
     }
-
-    br {
-      display: inline-block;
-    }
   }
 
   @media (min-width: @desktop) {
     display: flex;
     justify-content: center;
     column-gap: 20px;
-    padding: 59px 0;
+    padding: 57px 0;
     padding-bottom: 54px;
-    background: url("../img/grey-background-desktop.svg") center top 55px no-repeat;
+    background: url("../img/grey-background-desktop.svg") center top 52px no-repeat;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/grey-background-desktop.svg") center top 110px no-repeat;
-    }
-
-    br {
-      display: none;
+      background: url("../img/grey-background-desktop.svg") center top 52px no-repeat;
     }
   }
 }
 
 .description__features-item {
   margin-bottom: 31px;
+
+  br {
+    display: none;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -129,6 +132,10 @@
     max-width: 50%;
     margin-left: auto;
     margin-bottom: 35px;
+
+    br {
+      display: block;
+    }
   }
 
   @media (min-width: @desktop) {
@@ -138,6 +145,10 @@
     padding: 0;
     margin: 0;
     z-index: 2;
+
+    br {
+      display: none;
+    }
   }
 }
 
@@ -267,15 +278,15 @@
   @media (min-width: @tablet) {
     width: 238px;
     padding-top: 109px;
-    background: url("../img/diagram-fill.svg") center bottom 21px no-repeat,
+    background: url("../img/diagram-fill.svg") center top 107px no-repeat,
       url("../img/timer.svg") center top 53px no-repeat;
     background-size: 202px 202px, 238px 276px;
   }
 
   @media (min-width: @desktop) {
     width: 298px;
-    background: url("../img/diagram-fill.svg") center bottom 92px no-repeat,
-      url("../img/timer.svg") center bottom 68px no-repeat;
+    background: url("../img/diagram-fill.svg") center top 85px no-repeat,
+      url("../img/timer.svg") center top 15px no-repeat;
     background-size: 252px 252px, 298px 345px;
   }
 }
@@ -321,15 +332,23 @@
   @media (min-width: @desktop) {
     line-height: 30px;
     margin-bottom: 24px;
+
+    br {
+      display: none;
+    }
   }
 }
 
 .description__effect-text {
-  margin-bottom: 10px;
+  @media (min-width: @tablet) {
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
 
   @media (min-width: @desktop) {
-    max-width: 100%;
-    margin-bottom: 30px;
+    max-width: 530px;
+    margin: 0;
+    margin-bottom: 32px;
   }
 }
 
@@ -338,10 +357,6 @@
 }
 
 .description__break--tablet {
-  @media (min-width: @tablet) {
-    display: block;
-  }
-
   @media (min-width: @desktop) {
     display: none;
   }

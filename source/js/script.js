@@ -1,10 +1,19 @@
-var navMain = document.querySelector('.main-nav');
-var navToggle = document.querySelector('.main-nav__toggle');
-var pageHeaderOuterWrapper = document.querySelector('.page-header__outer-wpapper');
-var priceList = document.querySelector('.price__list');
-var toggleBase = document.querySelector('.price__toggle--base');
-var toggleStandart = document.querySelector('.price__toggle--standart');
-var toggleUnlim = document.querySelector('.price__toggle--unlim');
+const navMain = document.querySelector('.main-nav');
+const navToggle = document.querySelector('.main-nav__toggle');
+const pageHeaderOuterWrapper = document.querySelector('.page-header__outer-wpapper');
+
+const priceList = document.querySelector('.price__list');
+const toggleBase = document.querySelector('.price__toggle--base');
+const toggleStandart = document.querySelector('.price__toggle--standart');
+const toggleUnlim = document.querySelector('.price__toggle--unlim');
+
+const secondName = document.querySelector('.contest__data--second-name');
+const firstName = document.querySelector('.contest__data--first-name');
+const email = document.querySelector('.contest__data--email');
+const modalFailure = document.querySelector('.modal__failure-wrapper');
+const failureButton = document.querySelector('.modal__button--failure');
+const modalSuccess = document.querySelector('.modal__success-wrapper');
+const successButton = document.querySelector('.modal__button--success');
 
 // Menu
 
@@ -25,46 +34,91 @@ navToggle.addEventListener('click', function() {
   }
 });
 
+// Form
+
+function formPost() {
+  let forms = [...document.querySelectorAll('form')];
+  if(forms.length > 0) {
+    forms.forEach(form => {
+      form.addEventListener('submit', function(event) {
+          event.preventDefault();
+            let request = new XMLHttpRequest();
+
+            let formData = new FormData(form);
+            request.open('POST', 'https://echo.htmlacademy.ru');
+
+            request.addEventListener('readystatechange', function() {
+              if (this.readyState === 4 && this.status === 200) {
+
+              } else {
+                if (!firstName.value || !secondName.value || !email.value) {
+                  // show modal failure
+                  modalFailure.style.display = 'block';
+                  failureButton.focus();
+                  failureButton.addEventListener('click', function() {
+                    modalFailure.style.display = 'none';
+                  });
+                } else {
+                  // show modal success
+                  modalSuccess.style.display = 'block';
+                  successButton.focus();
+                  successButton.addEventListener('click', function() {
+                    modalSuccess.style.display = 'none';
+                  });
+                }
+                console.log('test');
+              }
+            });
+            request.send(formData);
+      });
+    });
+  }
+}
+
+formPost();
+
 // Price table
 
-toggleBase.addEventListener('click', function() {
-  if (toggleStandart.classList.contains('slider__toggle--current') || toggleUnlim.classList.contains('slider__toggle--current')) {
-    if (toggleStandart.classList.contains('slider__toggle--current')) {
-      toggleStandart.classList.remove('slider__toggle--current');
-      priceList.classList.remove('price__list--standart');
-    } else {
-      toggleUnlim.classList.remove('slider__toggle--current');
-      priceList.classList.remove('price__list--unlim');
+if (priceList) {
+  toggleBase.addEventListener('click', function() {
+    if (toggleStandart.classList.contains('slider__toggle--current') || toggleUnlim.classList.contains('slider__toggle--current')) {
+      if (toggleStandart.classList.contains('slider__toggle--current')) {
+        toggleStandart.classList.remove('slider__toggle--current');
+        priceList.classList.remove('price__list--standart');
+      } else {
+        toggleUnlim.classList.remove('slider__toggle--current');
+        priceList.classList.remove('price__list--unlim');
+      }
+      toggleBase.classList.add('slider__toggle--current');
+      priceList.classList.add('price__list--base');
     }
-    toggleBase.classList.add('slider__toggle--current');
-    priceList.classList.add('price__list--base');
-  }
-});
+  });
 
-toggleStandart.addEventListener('click', function() {
-  if (toggleBase.classList.contains('slider__toggle--current') || toggleUnlim.classList.contains('slider__toggle--current')) {
-    if (toggleBase.classList.contains('slider__toggle--current')) {
-      toggleBase.classList.remove('slider__toggle--current');
-      priceList.classList.remove('price__list--base');
-    } else {
-      toggleUnlim.classList.remove('slider__toggle--current');
-      priceList.classList.remove('price__list--unlim');
+  toggleStandart.addEventListener('click', function() {
+    if (toggleBase.classList.contains('slider__toggle--current') || toggleUnlim.classList.contains('slider__toggle--current')) {
+      if (toggleBase.classList.contains('slider__toggle--current')) {
+        toggleBase.classList.remove('slider__toggle--current');
+        priceList.classList.remove('price__list--base');
+      } else {
+        toggleUnlim.classList.remove('slider__toggle--current');
+        priceList.classList.remove('price__list--unlim');
+      }
+      toggleStandart.classList.add('slider__toggle--current');
+      priceList.classList.add('price__list--standart');
     }
-    toggleStandart.classList.add('slider__toggle--current');
-    priceList.classList.add('price__list--standart');
-  }
-});
+  });
 
-toggleUnlim.addEventListener('click', function() {
-  if (toggleBase.classList.contains('slider__toggle--current') || toggleStandart.classList.contains('slider__toggle--current')) {
-    if (toggleBase.classList.contains('slider__toggle--current')) {
-      toggleBase.classList.remove('slider__toggle--current');
-      priceList.classList.remove('price__list--base');
-    } else {
-      toggleStandart.classList.remove('slider__toggle--current');
-      priceList.classList.remove('price__list--standart');
+  toggleUnlim.addEventListener('click', function() {
+    if (toggleBase.classList.contains('slider__toggle--current') || toggleStandart.classList.contains('slider__toggle--current')) {
+      if (toggleBase.classList.contains('slider__toggle--current')) {
+        toggleBase.classList.remove('slider__toggle--current');
+        priceList.classList.remove('price__list--base');
+      } else {
+        toggleStandart.classList.remove('slider__toggle--current');
+        priceList.classList.remove('price__list--standart');
+      }
+      toggleUnlim.classList.add('slider__toggle--current');
+      priceList.classList.add('price__list--unlim');
     }
-    toggleUnlim.classList.add('slider__toggle--current');
-    priceList.classList.add('price__list--unlim');
-  }
-});
+  });
+}

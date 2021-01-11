@@ -17,14 +17,14 @@
   }
 
   @media (min-width: @desktop) {
-    background: url("../img/screen-desktop.jpg") right 250px bottom 173px no-repeat,
-      url("../img/phone-desktop.png") right bottom no-repeat,
+    background: url("../img/screen-desktop.jpg") right 254px bottom 173px no-repeat,
+      url("../img/phone-desktop.png") right 4px bottom no-repeat,
       url("../img/back-desktop.jpg") bottom no-repeat;
     background-size: 230px 408px, 1050px 645px, cover;
 
     @media (min-resolution: 2dppx) {
-      background: url("../img/screen-desktop@2x.jpg") right 250px bottom 173px no-repeat,
-        url("../img/phone-desktop@2x.png") right bottom no-repeat,
+      background: url("../img/screen-desktop@2x.jpg") right 254px bottom 173px no-repeat,
+        url("../img/phone-desktop@2x.png") right 4px bottom no-repeat,
         url("../img/back-desktop@2x.jpg") bottom no-repeat;
       background-size: 230px 408px, 1050px 645px, cover;
     }
@@ -56,7 +56,7 @@
   margin: 0 auto;
 
   @media (min-width: @tablet) {
-    padding-top: 203px;
+    padding-top: 205px;
     padding-bottom: 0;
   }
 
@@ -72,14 +72,10 @@
   color: @white;
   margin: 0 auto;
 
-  br {
-    @media (max-width: @mobile-only) {
-      display: none;
-    }
-  }
-
   @media (min-width: @tablet) {
+    max-width: 240px;
     margin: 0;
+    margin-left: 30px;
     margin-right: auto;
   }
 }
@@ -95,8 +91,7 @@
 
   @media (min-width: @tablet) {
     max-width: 300px;
-    padding-top: 31px;
-    padding-bottom: 114px;
+    padding-bottom: 113px;
     margin: 0;
     margin-right: auto;
   }
@@ -104,16 +99,16 @@
   @media (min-width: @desktop) {
     max-width: 940px;
     align-items: flex-start;
-    padding-top: 36px;
+    padding-top: 37px;
     padding-bottom: 127px;
     margin: 0 auto;
   }
 }
 
 .download__button {
-  width: 280px;
+  width: 274px;
   margin: 0;
-  margin-bottom: 33px;
+  margin-bottom: 35px;
 
   &:hover {
     color: @pink;
@@ -125,22 +120,23 @@
   }
 
   @media (min-width: @tablet) {
-    width: 300px;
+    width: 295px;
     margin-bottom: 46px;
   }
 
   @media (min-width: @desktop) {
-    margin-bottom: 68px;
+    margin-bottom: 72px;
   }
 }
 
 .download__os-list {
   margin: 0 auto;
-  margin-bottom: 15px;
+  margin-bottom: 18px;
   padding: 0;
 
   @media (min-width: @tablet) {
-    margin-bottom: 27px;
+    margin-left: 46px;
+    margin-bottom: 33px;
   }
 
   @media (min-width: @desktop) {
@@ -156,11 +152,8 @@
   justify-content: space-between;
   align-items: center;
   width: 204px;
+  height: 56px;
   list-style: none;
-
-  @media (min-width: @tablet) {
-    width: 208px;
-  }
 }
 
 .download__os-logo--windows {

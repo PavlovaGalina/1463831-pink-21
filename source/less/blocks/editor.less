@@ -41,6 +41,7 @@
     max-width: 800px;
     justify-content: space-between;
     margin: 0 auto;
+    margin-bottom: 28px;
     padding-top: 56px;
     padding-bottom: 58px;
     padding-left: 80px;
@@ -100,7 +101,6 @@
     width: 275px;
     margin-right: 0;
     flex-direction: row;
-    align-items: center;
     border-bottom: 1px solid @grey;
   }
 
@@ -122,9 +122,10 @@
   @media (min-width: @tablet) {
     width: 30px;
     margin: 0;
+    align-self: center;
   }
 
-  @media (min-width: @tablet) {
+  @media (min-width: @desktop) {
     width: 50px;
   }
 }
@@ -132,30 +133,34 @@
 .editor__tool-icon {
   width: 100%;
   height: auto;
-  fill: fade(@blue-grey, 30%);
+  color: fade(@blue-grey, 30%);
+  cursor: pointer;
 
   &:hover {
-    fill: fade(@blue-grey, 50%);
+    color: fade(@blue-grey, 50%);
   }
 
   &--active,
   &--active:hover {
-    fill: @pink;
+    color: @pink;
   }
 
   @media (min-width: @tablet) {
-    fill: @pink;
+    color: @pink;
+    cursor: default;
 
     &:hover {
-      fill: @pink;
+      color: @pink;
     }
 
     &--crop {
       width: 22px;
+      margin-bottom: 12px;
     }
 
     &--fill {
       width: 24px;
+      margin-top: 6px;
     }
 
     &--contrast {
@@ -170,6 +175,7 @@
 
     &--fill {
       width: 48px;
+      margin: 0;
     }
 
     &--contrast {
@@ -205,6 +211,7 @@
 
   @media (min-width: @desktop) {
     margin-right: 30px;
+    padding-bottom: 30px;
   }
 }
 
