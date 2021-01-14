@@ -29,4 +29,31 @@
   @media (min-width: @tablet) {
     margin: 0;
   }
+
+  &:hover path {
+    fill: @pink;
+  }
+
+  &:active path {
+    opacity: 0.3;
+  }
+}
+
+.page-footer__logo-image--tablet {
+  width: 145px;
+  height: 40px;
+
+  @media (min-width: @desktop) {
+    display: none;
+  }
+}
+
+.page-footer__logo-image--desktop {
+  display: none;
+
+  @media (min-width: @desktop) {
+    display: block;
+    width: 147px;
+    height: 40px;
+  }
 }

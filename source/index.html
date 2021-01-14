@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="/fonts/opensans.woff2" as="font">
   </head>
@@ -69,21 +70,21 @@
           <ul class="download__os-list download__os">
             <li class="download__os-item">
               <a class="download__os-link" href="https://www.apple.com/ru/app-store/">
-                <svg class="download__os-logo download__os-logo--ios" width="47" height="56">
+                <svg class="download__os-logo download__os-logo--ios" width="47" height="56" aria-label="App Store">
                   <use xlink:href="/img/sprite.svg#icon-ios"></use>
                 </svg>
               </a>
             </li>
             <li  class="download__os-item">
               <a class="download__os-link" href="https://play.google.com/store?hl=ru&gl=US">
-                <svg class="download__os-logo download__os-logo--android" width="43" height="47">
+                <svg class="download__os-logo download__os-logo--android" width="43" height="47" aria-label="Google Play">
                   <use xlink:href="/img/sprite.svg#icon-android"></use>
                 </svg>
               </a>
             </li>
             <li  class="download__os-item">
               <a class="download__os-link" href="https://www.microsoft.com/ru-ru/store/apps/windows">
-                <svg class="download__os-logo download__os-logo--windows" width="44" height="41">
+                <svg class="download__os-logo download__os-logo--windows" width="44" height="41" aria-label="Microsoft Store">
                   <use xlink:href="/img/sprite.svg#icon-windows"></use>
                 </svg>
               </a>
@@ -232,6 +233,7 @@
             </li>
           </ul>
           <div class="contacts__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1610553284677!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </div>
         </div>
       </section>
@@ -240,12 +242,12 @@
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
-          <a class="page-footer__logo logo">
+          <span>
             <picture>
               <source media="(min-width: 960px)" srcset="img/logotype-blue-desktop.svg">
               <img src="img/logotype-blue-tablet.svg" width="145" height="40" alt="Логотип Pink">
             </picture>
-          </a>
+          </span>
         </div>
         <div class="page-footer__social social">
           <ul class="social__list">

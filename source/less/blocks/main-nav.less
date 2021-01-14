@@ -41,10 +41,10 @@
 }
 
 .main-nav--closed .main-nav__toggle:active::before {
-  background-color: fade(@pink, 30%);
+  background-color: @transparent-pink;
   box-shadow:
-    0 10px 0 0 fade(@pink, 30%),
-    0 20px 0 0 fade(@pink, 30%);
+    0 10px 0 0 @transparent-pink,
+    0 20px 0 0 @transparent-pink;
 }
 
 @media (max-width: @tablet-mobile-only) {
@@ -89,7 +89,7 @@
 
   &:active::before,
   &:active::after {
-    background-color: fade(@pink, 30%);
+    background-color: @transparent-pink;
   }
 
   @media (min-width: @tablet) {
@@ -135,7 +135,7 @@
   padding: 15px 0;
   box-shadow:
     0 1px 0 @black,
-    inset 0 1px 0 fade(@white, 15%);
+    inset 0 1px 0 @transparent-white-15;
 
   @media (min-width: @desktop) {
     line-height: 18px;
@@ -152,10 +152,10 @@
 }
 
 .main-nav__link:active {
-  color: fade(@pink, 30%);
+  color: @transparent-pink;
 
   @media (min-width: @desktop) {
-    color: fade(@white, 30%);
+    color: @transparent-pink;
   }
 }
 
@@ -173,6 +173,6 @@
 
 .main-nav__link--current:active {
   @media (min-width: @desktop) {
-    border-bottom: 2px solid fade(@white, 30%);
+    border-bottom: 2px solid @transparent-white-30;
   }
 }

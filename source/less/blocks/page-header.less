@@ -18,7 +18,7 @@
 
 .page-header__outer-wpapper {
   width: 100%;
-  background-color: fade(@black, 30%);
+  background-color: @transparent-black;
 }
 
 @media (max-width: @tablet-mobile-only) {
@@ -27,7 +27,7 @@
   }
 
   .page-header__outer-wpapper--closed-menu {
-    background-color: fade(@black, 30%);
+    background-color: @transparent-black;
   }
 
   .page-header__outer-wpapper--opened-menu {
@@ -48,7 +48,7 @@
 
 .page-header__logo-wrapper {
   padding: 22px 20px;
-  padding-bottom: 16px;
+  padding-bottom: 18px;
 
   @media (min-width: @tablet) {
     padding: 27px 20px;
@@ -75,7 +75,8 @@
   }
 
   &:active path {
-    fill: fade(@white, 30%);
+    fill: @white;
+    opacity: 0.3;
   }
 }
 

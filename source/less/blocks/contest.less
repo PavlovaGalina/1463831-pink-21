@@ -46,7 +46,7 @@
     font-size: 50px;
     line-height: 68px;
     padding: 177px 20px;
-    padding-bottom: 58px;
+    padding-bottom: 59px;
   }
 
   @media (min-width: @desktop) {
@@ -62,7 +62,7 @@
   text-align: center;
 
   @media (min-width: @tablet) {
-    padding: 92px 20px;
+    padding: 91px 20px;
     padding-bottom: 72px;
   }
 
@@ -115,6 +115,10 @@
   text-transform: uppercase;
   text-align: center;
   padding: 0;
+
+  @media (min-width: @tablet) {
+    line-height: 30px;
+  }
 }
 
 .contest__data,
@@ -125,6 +129,7 @@
   font-weight: 400;
   color: @blue-grey;
   margin: 0;
+  opacity: 1;
 }
 
 .contest__form {
@@ -157,7 +162,7 @@
 
   @media (min-width: @tablet) {
     padding-bottom: 0;
-    margin-bottom: 67px;
+    margin-bottom: 61px;
   }
 
   @media (min-width: @desktop) {
@@ -201,8 +206,8 @@
 }
 
 .contest__input {
-  height: 59px;
-  padding: 0 20px;
+  padding: 14px 20px;
+  padding-bottom: 15px;
   border: 2px solid @grey;
   border-radius: 1px;
 
@@ -219,9 +224,10 @@
 // achievements checkbox
 
 .contest__achievements {
+  position: relative;
   background-color: @light-grey;
   margin: 0;
-  padding: 39px 20px;
+  padding: 117px 20px;
   padding-bottom: 47px;
   border: none;
   order: 2;
@@ -246,15 +252,17 @@
 }
 
 .contest__title--achievements {
+  position: absolute;
   width: 220px;
-  margin: 0 auto;
-  margin-bottom: 42px;
+  left: 50px;
+  top: 38px;
 
   @media (min-width: @tablet) {
+    position: static;
     display: block;
     width: 436px;
-    margin: -25px auto;
-    margin-bottom: 32px;
+    margin: 0 auto;
+    margin-bottom: 25px;
     background-color: @white;
   }
 }
@@ -335,7 +343,7 @@
 
   @media (min-width: @tablet) {
     margin: 0 20px;
-    margin-bottom: 66px;
+    margin-bottom: 60px;
     padding-top: 16px;
     border: 2px solid @grey;
     border-radius: 1px;
@@ -349,7 +357,7 @@
   padding-bottom: 42px;
 
   @media (min-width: @tablet) {
-    padding: 20px 60px;
+    padding: 14px 60px;
     padding-bottom: 27px;
   }
 
@@ -367,7 +375,7 @@
   @media (min-width: @tablet) {
     display: block;
     width: 260px;
-    margin: -25px auto;
+    margin: 0 auto;
     margin-bottom: 0;
     background-color: @white;
   }
@@ -446,9 +454,10 @@
 // os radio
 
 .contest__os {
+  position: relative;
   background-color: @light-grey;
   margin: 0;
-  padding: 39px 20px;
+  padding: 114px 20px;
   padding-bottom: 46px;
   border: none;
   order: 4;
@@ -456,7 +465,7 @@
   @media (min-width: @tablet) {
     background-color: @white;
     margin: -9px 20px;
-    margin-bottom: 58px;
+    margin-bottom: 52px;
     padding-top: 16px;
     padding-bottom: 57px;
     border: 2px solid @grey;
@@ -466,19 +475,24 @@
 
   @media (min-width: @desktop) {
     width: 391px;
+    margin-top: -14px;
     margin-left: auto;
     margin-right: 0;
-    margin-bottom: 60px;
+    margin-bottom: 53px;
   }
 }
 
 .contest__title--os {
-  margin-bottom: 39px;
+  position: absolute;
+  width: 220px;
+  left: 50px;
+  top: 38px;
 
   @media (min-width: @tablet) {
+    position: static;
     width: 368px;
-    margin: -25px auto;
-    margin-bottom: 33px;
+    margin: 0 auto;
+    margin-bottom: 28px;
     background-color: @white;
   }
 }
@@ -554,15 +568,15 @@
 
 .contest__emotions-wrapper {
   padding: 38px 20px;
-  padding-bottom: 44px;
+  padding-bottom: 46px;
   text-align: center;
   order: 5;
 
   @media (min-width: @tablet) {
     padding: 0 60px;
-    padding-bottom: 46px;
+    padding-bottom: 49px;
     margin: 0 20px;
-    margin-bottom: 68px;
+    margin-bottom: 66px;
     border: 2px solid @grey;
     border-radius: 1px;
   }
@@ -572,7 +586,7 @@
     margin: 0;
     margin-bottom: 65px;
     padding: 0 60px;
-    padding-bottom: 38px;
+    padding-bottom: 40px;
   }
 }
 
@@ -582,13 +596,13 @@
 
   @media (min-width: @tablet) {
     width: 260px;
-    margin: -9px auto;
-    margin-bottom: 36px;
+    margin: -15px auto;
+    margin-bottom: 30px;
     background-color: @white;
   }
 
   @media (min-width: @desktop) {
-    margin-bottom: 32px;
+    margin-bottom: 27px;
   }
 }
 

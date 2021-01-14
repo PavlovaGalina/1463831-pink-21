@@ -82,7 +82,7 @@
   padding-left: 8px;
   padding-top: 42px;
   list-style: none;
-  border-bottom: 1px solid fade(@blue-grey, 10%);
+  border-bottom: 1px solid @transparent-blue-grey-10;
 
   @media (min-width: @tablet) {
     flex-direction: column;
@@ -133,11 +133,13 @@
 .editor__tool-icon {
   width: 100%;
   height: auto;
-  color: fade(@blue-grey, 30%);
+  color: @blue-grey;
+  opacity: 0.3;
   cursor: pointer;
 
   &:hover {
-    color: fade(@blue-grey, 50%);
+    color: @blue-grey;
+    opacity: 0.5;
   }
 
   &--active,
@@ -147,10 +149,12 @@
 
   @media (min-width: @tablet) {
     color: @pink;
+    opacity: 1;
     cursor: default;
 
     &:hover {
       color: @pink;
+      opacity: 1;
     }
 
     &--crop {
@@ -307,7 +311,7 @@
   }
 
   &:active {
-    color: fade(@white, 30%);
+    color: @transparent-white-30;
   }
 
   @media (min-width: @tablet) {
@@ -335,7 +339,7 @@
   }
 
   &:active {
-    color: fade(@white, 30%);
+    color: @transparent-white-30;
     background-color: @blue-grey;
   }
 

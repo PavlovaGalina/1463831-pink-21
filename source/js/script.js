@@ -7,6 +7,7 @@ const toggleBase = document.querySelector('.price__toggle--base');
 const toggleStandart = document.querySelector('.price__toggle--standart');
 const toggleUnlim = document.querySelector('.price__toggle--unlim');
 
+const contestForm = document.querySelector('.contest__form');
 const secondName = document.querySelector('.contest__data--second-name');
 const firstName = document.querySelector('.contest__data--first-name');
 const email = document.querySelector('.contest__data--email');
@@ -19,6 +20,12 @@ const successButton = document.querySelector('.modal__button--success');
 
 navMain.classList.remove('main-nav--nojs');
 pageHeaderOuterWrapper.classList.remove('page-header__outer-wpapper--nojs');
+
+document.addEventListener("DOMContentLoaded",function() {
+  navMain.classList.remove('main-nav--opened');
+  navMain.classList.add('main-nav--closed');
+  pageHeaderOuterWrapper.classList.remove('page-header__outer-wpapper--opened-menu');
+});
 
 navToggle.addEventListener('click', function() {
   if (navMain.classList.contains('main-nav--closed')) {
@@ -36,46 +43,24 @@ navToggle.addEventListener('click', function() {
 
 // Form
 
-function formPost() {
-  let forms = [...document.querySelectorAll('form')];
-  if(forms.length > 0) {
-    forms.forEach(form => {
-      form.addEventListener('submit', function(event) {
-          event.preventDefault();
-            let request = new XMLHttpRequest();
-
-            let formData = new FormData(form);
-            request.open('POST', 'https://echo.htmlacademy.ru');
-
-            request.addEventListener('readystatechange', function() {
-              if (this.readyState === 4 && this.status === 200) {
-
-              } else {
-                if (!firstName.value || !secondName.value || !email.value) {
-                  // show modal failure
-                  modalFailure.style.display = 'block';
-                  failureButton.focus();
-                  failureButton.addEventListener('click', function() {
-                    modalFailure.style.display = 'none';
-                  });
-                } else {
-                  // show modal success
-                  modalSuccess.style.display = 'block';
-                  successButton.focus();
-                  successButton.addEventListener('click', function() {
-                    modalSuccess.style.display = 'none';
-                  });
-                }
-                console.log('test');
-              }
-            });
-            request.send(formData);
+if (contestForm) {
+  contestForm.addEventListener("submit", function (evt) {
+    evt.preventDefault();
+    if (!firstName.value || !secondName.value || !email.value) {
+      // show modal failure
+        modalFailure.style.display = 'block';
+        failureButton.addEventListener('click', function() {
+        modalFailure.style.display = 'none';
       });
-    });
-  }
+    } else {
+      // show modal success
+      modalSuccess.style.display = 'block';
+      successButton.addEventListener('click', function() {
+      modalSuccess.style.display = 'none';
+      });
+    }
+  });
 }
-
-formPost();
 
 // Price table
 
