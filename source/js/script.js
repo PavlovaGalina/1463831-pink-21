@@ -7,6 +7,9 @@ const toggleBase = document.querySelector('.price__toggle--base');
 const toggleStandart = document.querySelector('.price__toggle--standart');
 const toggleUnlim = document.querySelector('.price__toggle--unlim');
 
+const editorForm = document.querySelector('.editor__tool-wrapper');
+const resetButton = document.querySelector('.editor__cancel-button');
+
 const contestForm = document.querySelector('.contest__form');
 const secondName = document.querySelector('.contest__data--second-name');
 const firstName = document.querySelector('.contest__data--first-name');
@@ -21,7 +24,7 @@ const successButton = document.querySelector('.modal__button--success');
 navMain.classList.remove('main-nav--nojs');
 pageHeaderOuterWrapper.classList.remove('page-header__outer-wpapper--nojs');
 
-document.addEventListener("DOMContentLoaded",function() {
+document.addEventListener('DOMContentLoaded',function() {
   navMain.classList.remove('main-nav--opened');
   navMain.classList.add('main-nav--closed');
   pageHeaderOuterWrapper.classList.remove('page-header__outer-wpapper--opened-menu');
@@ -44,21 +47,29 @@ navToggle.addEventListener('click', function() {
 // Form
 
 if (contestForm) {
-  contestForm.addEventListener("submit", function (evt) {
+  contestForm.addEventListener('submit', function (evt) {
     evt.preventDefault();
     if (!firstName.value || !secondName.value || !email.value) {
       // show modal failure
-        modalFailure.style.display = 'block';
-        failureButton.addEventListener('click', function() {
+      modalFailure.style.display = 'block';
+      failureButton.addEventListener('click', function() {
         modalFailure.style.display = 'none';
       });
     } else {
       // show modal success
       modalSuccess.style.display = 'block';
       successButton.addEventListener('click', function() {
-      modalSuccess.style.display = 'none';
+        modalSuccess.style.display = 'none';
       });
     }
+  });
+}
+
+// Editor
+
+if (editorForm) {
+  resetButton.addEventListener('click', function() {
+    editorForm.reset();
   });
 }
 
