@@ -137,26 +137,9 @@
   opacity: 0.3;
   cursor: pointer;
 
-  &:hover {
-    color: @blue-grey;
-    opacity: 0.5;
-  }
-
-  &--active,
-  &--active:hover {
-    color: @pink;
-    opacity: 1;
-  }
-
   @media (min-width: @tablet) {
     color: @pink;
     opacity: 1;
-    cursor: default;
-
-    &:hover {
-      color: @pink;
-      opacity: 1;
-    }
 
     &--crop {
       width: 22px;
@@ -186,6 +169,16 @@
     &--contrast {
       width: 32px;
     }
+  }
+
+  &:hover {
+    color: @blue-grey;
+    opacity: 0.5;
+  }
+
+  &--active {
+    color: @pink;
+    opacity: 1;
   }
 }
 

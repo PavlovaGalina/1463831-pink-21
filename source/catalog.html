@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page-html" lang="ru">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="preload" href="/fonts/opensans.woff2" as="font">
   </head>
-  <body class="page__body">
-    <header class="page-header">
+  <body class="page">
+    <header class="page__header page-header">
       <div class="page-header__outer-wpapper page-header__outer-wpapper--opened-menu page-header__outer-wpapper--nojs">
         <div class="page-header__wrapper">
           <div class="page-header__logo-wrapper">
@@ -72,7 +72,7 @@
       </div>
     </header>
 
-    <main class="page-main">
+    <main class="page__main">
       <section class="catalog">
         <div class="catalog__wrapper">
           <div class="catalog__header">
@@ -225,7 +225,7 @@
                   </button>
                   <div class="editor__control editor__control--crop editor__control--active">
                       <div class="editor__bar"></div>
-                      <div class="editor__toggle editor__toggle--crop" tabindex=0></div>
+                      <div class="editor__toggle editor__toggle--crop" tabindex=0 aria-label="Обрезка"></div>
                   </div>
                   <input class="visually-hidden" type="range" name="crop" id="editor-crop" value="10">
                 </li>
@@ -237,7 +237,7 @@
                   </button>
                   <div class="editor__control">
                       <div class="editor__bar"></div>
-                      <div class="editor__toggle editor__toggle--fill" tabindex="0"></div>
+                      <div class="editor__toggle editor__toggle--fill" tabindex="0" aria-label="Заливка"></div>
                   </div>
                   <input class="visually-hidden" type="range" name="fill" id="editor-fill" value="40">
                 </li>
@@ -249,7 +249,7 @@
                   </button>
                   <div class="editor__control">
                       <div class="editor__bar"></div>
-                      <div class="editor__toggle editor__toggle--contrast" tabindex=0></div>
+                      <div class="editor__toggle editor__toggle--contrast" tabindex=0 aria-label="Контрастность"></div>
                   </div>
                   <input class="visually-hidden" type="range" name="contrast" id="editor-contrast" value="25">
                 </li>
@@ -264,7 +264,7 @@
       </section>
     </main>
 
-    <footer class="page-footer">
+    <footer class="page__footer page-footer">
       <div class="page-footer__wrapper">
         <div class="page-footer__logo">
           <a href="index.html">
